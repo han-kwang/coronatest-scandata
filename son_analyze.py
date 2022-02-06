@@ -7,6 +7,7 @@ License: MIT.
 
 Created on Sat Feb  5 23:28:03 2022
 """
+from pathlib import Path
 import pandas as pd
 
 def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
@@ -35,7 +36,7 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
         for fn in csv_fnames
         ]
     df_list = sorted(df_list, key=lambda df: df.iloc[0]['scan_time'])
-    df = pd.concat(df_list)
+    df = pd.concat(df_list).reset_index().drop(columns='index')
     df['scan_time'] = pd.to_datetime(df['scan_time'])
     df['apt_date'] = pd.to_datetime(df['apt_date'])
 
@@ -47,7 +48,7 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
     return df, scan_start_tms
 
 def analyze_son_csv(
-        csv_fname='data-son/son_scan-latest.csv', irange=(0, -1),
+        csv_fname='data-son/son_scan-latest.csv', irange=(0, None),
         first_notnew=True
         ):
     """Analyze SON csv data; print results.
@@ -55,20 +56,14 @@ def analyze_son_csv(
     Parameters:
 
     - csv_fname: CSV filename (str) OR list of multiple files.
-    - irange: (i_first, i_last): which scans to process, including i_last.
-      Default (0, -1) to process all.
+    - irange: index range, like a slice [a:b] or default [0:].
     - first_notnew: True to suppress 'New locations' on first entry.
     """
     df, scan_start_tms = get_csv_as_dataframe(csv_fname)
     prev_addresses = set()
-
-    if irange[1] == -1:
-        iscans = list(range(irange[0], len(scan_start_tms)))
-    else:
-        iscans = list(range(irange[0], irange[1]+1))
-
-    # Add one so that each scan can be treated as interval.
+    iscans = list(range(len(scan_start_tms)))[irange[0]:irange[1]]
     scan_start_tms.append(scan_start_tms[-1] + pd.Timedelta('1h'))
+    # Add one so that each scan can be treated as interval.
 
     for i_scan in iscans:
         tm0, tm1 = scan_start_tms[i_scan:i_scan+2]
@@ -117,5 +112,19 @@ def analyze_son_csv(
                 f'  - Top-{ntop}: {topbooks}'
                 )
 
+def analyze_son_csv_autofind(nfiles=3, irange=(-30, None)):
+    """Analysis of multiple recent csv files, autodetect them.
+
+    Paremeters:
+
+    - nfiles: number of recent CSV files to load.
+    - irange: index range, like a slice [a:b] or default [0:].
+    """
+    glob_pattern = 'son_scan-20??-W??.csv'
+    flist = list(Path('data-son').glob(glob_pattern))
+    if len(flist) == 0:
+        raise FileNotFoundError(f'data-son/{glob_pattern}')
+    return analyze_son_csv(flist, irange=irange)
+            
 if __name__ == '__main__':
-    analyze_son_csv()
+    analyze_son_csv_autofind()
