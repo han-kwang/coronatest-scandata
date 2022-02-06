@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Enschede - Reulver",
+    "nameEn": "Enschede - Reulver",
+    "address": "Reulver 120, 7544 RT, Enschede ",
+    "distanceInKm": "####",
+    "descriptionNl": "De testlocatie bevindt zich te Twentehallen.",
+    "descriptionEn": "Testing is located at the 'Twentehallen'.",
+    "latitude": 52.19113,
+    "longitude": 6.88701,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "COVIDTest Nederland - Samenwerkingspartner GGD",
+        "nameEn": "COVIDTest Nederland - Samenwerkingspartner GGD",
+        "termsNl": "https://covidtestnederland.nl/algemene-voorwaarden/",
+        "termsEn": "https://covidtestnederland.nl/algemene-voorwaarden/ ",
+        "privacyStatementNl": "https://covidtestnederland.nl/privacy/",
+        "privacyStatementEn": "https://covidtestnederland.nl/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

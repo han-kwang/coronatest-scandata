@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Hoofddorp - Claus Park Collection",
+    "nameEn": "Hoofddorp - Claus Park Collection",
+    "address": "Bosweg 19, 2131 LX, Hoofddorp",
+    "distanceInKm": "####",
+    "descriptionNl": "Neem de Bosweg (brandweer kazerne aan uw linkerhand).\nVolg de borden Courtyard Hotel en Claus Events.\nRijd voorbij het hotel (Courtyard, aan uw rechterhand), richting Claus Eventcentre. U rijdt voorbij het hoofdgebouw en de auto to parkeren op het grote terrein. (NIET IN DE BERM OF OPENBARE WEG = BOETE)\n\nBij Claus Event Centre parkeerterrein oprijden en daar fiets/auto parkeren. Volg borden Ingang (Voorbij DE hoofdingang lopen en na het gebouw direct linksaf het grind pad oplopen). Volg de borden ingang.",
+    "descriptionEn": "Take the Bosweg (fire station on your left).\n\nFollow the signs Courtyard Hotel and Claus Events.\nDrive past the hotel (Courtyard, on your right), direction Claus Event Centre. Drive past the main building and park your car in the large grounds. (DO NOT PARK IN THE VERGE OR ON THE PUBLIC ROAD = FINE)\n\nAt Claus Eventcentre drive into the car park and park your bicycle/car there.\n\nFollow signs ingang/entrance (walk past the main entrance and turn left onto the gravel path after the building). Follow signs ingang or entrance.",
+    "latitude": 52.32156314819267,
+    "longitude": 4.664843224395829,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "nameEn": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "termsNl": "https://csntesten.nl/algemenevoorwaarden",
+        "termsEn": "https://csntesten.nl/algemenevoorwaarden",
+        "privacyStatementNl": "https://csntesten.nl/privacyverklaring",
+        "privacyStatementEn": "https://csntesten.nl/privacyverklaring",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}
