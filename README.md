@@ -21,11 +21,11 @@ gedaan:
   antigeentesten. Testen is gratis, maar gedurende drukke perioden schiet de
   capaciteit tekort; o.a. in november 2021 en januari 2022.
 - Testen voor Toegang bij Stichting Open Nederland (SON): antigeentesten, voor
-  coronatoegangsbewijs (horeca e.d.). Kostenloos. Niet bedoeld voor mensen met
+  coronatoegangsbewijs (horeca e.d.). Kosteloos. Niet bedoeld voor mensen met
   symptomen. De testen worden afgenomen door commerciële aanbieders.
 - Testen bij drukte/Testen bij Klachten, ook bij SON. GGD kan sinds 27
-  januari doorverwijzen naar SON (antigeentests). Kostenloos. Uitvoering door
-  dezelfde bedrijven maar op andere locaties, maar de financiering werkt
+  januari doorverwijzen naar SON (antigeentests). Kosteloos. Uitvoering door
+  dezelfde bedrijven maar op andere locaties en de financiering werkt
   vermoedelijk anders dan bij Testen voor Toegang.
 - Commerciële aanbieders voor negatief-certificaten voor internationale
   reizigers. 
@@ -69,8 +69,9 @@ Bestanden
 - `num_slots_2h`: aantal slots tot 2 uur vooruit.
 - `num_booked_45m`: aantal boekingen tot 45 minuten vooruit.
 - `num_slots_45m`: aantal slots tot 45 minuten vooruit.
-- `first_tm`: eerst beschikbare afspraaktijd (HH:MM).
-- `last_tm`: laatst beschikbare afspraaktijd (HH:MM).
+- `first_tm`: eerst beschikbare afspraaktijd (HH:MM) of '-----' indien
+   er geen slots waren.
+- `last_tm`: laatst beschikbare afspraaktijd (HH:MM) of '-----'.
 - `company`: naam uitvoerend bedrijf.
 - `is_active`: boolean; komt uit de API. Onduidelijk of deze ooit False
   kan zijn.
