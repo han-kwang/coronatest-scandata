@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Hillegom - Weeresteinstraat",
+    "nameEn": "Hillegom - Weeresteinstraat",
+    "address": "Weeresteinstraat 39, 2182 GR, Hillegom",
+    "distanceInKm": "####",
+    "descriptionNl": "Er is geen aanvullende bereikbaarheidsinformatie beschikbaar voor deze locatie",
+    "descriptionEn": "There is no further accessibility information available for this location.",
+    "latitude": 52.31829184637464,
+    "longitude": 4.58299074136085,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "nameEn": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "termsNl": "https://csntesten.nl/algemenevoorwaarden",
+        "termsEn": "https://csntesten.nl/algemenevoorwaarden",
+        "privacyStatementNl": "https://csntesten.nl/privacyverklaring",
+        "privacyStatementEn": "https://csntesten.nl/privacyverklaring",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

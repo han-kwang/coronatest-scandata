@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Amsterdam - RAI",
+    "nameEn": "Amsterdam - RAI",
+    "address": "Europaplein 22, 1078 GZ, Amsterdam",
+    "distanceInKm": "####",
+    "descriptionNl": "De tijdelijke locatie ter ondersteuning van de GGD is gevestigd in het Europa Foyer bij ingang H, naast het GrandCafe en aan het parkeerplein (binnenplaats). \n\nU kunt parkeren op P8. Volg hierna de borden tijdelijke locatie ter ondersteuning GGD. \n\nHet eerste half uur is gratis parkeren; hierna wordt een uurtarief gerekend. Het is belangrijk dat men eerst langs de parkeerautomaat gaat en het kenteken invoert. Binnen het half uur hoeft er niet betaald te worden. Staat u er langer, dan kan aan de automaat betaald worden voor uitrijden.",
+    "descriptionEn": "The GGD support location is located in the Europa Foyer at entrance H, next to the GrandCafe and the parking lot (courtyard). \n\nYou can park at P8. Then follow the signs Testen voor tijdelijke locatie ter ondersteuning GGD/Support location GGD. \n\nThe first half hour of parking is free; after that an hourly fee will be charged. It is important to first pass the parking meter and enter the license plate number. Within the half hour, you do not have to pay. If you are parked longer, you can pay for exiting at the machine.",
+    "latitude": 52.34162925360232,
+    "longitude": 4.889451213990353,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "nameEn": "CoronasneltestNederland.nl - Samenwerkingspartner GGD",
+        "termsNl": "https://csntesten.nl/algemenevoorwaarden",
+        "termsEn": "https://csntesten.nl/algemenevoorwaarden",
+        "privacyStatementNl": "https://csntesten.nl/privacyverklaring",
+        "privacyStatementEn": "https://csntesten.nl/privacyverklaring",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

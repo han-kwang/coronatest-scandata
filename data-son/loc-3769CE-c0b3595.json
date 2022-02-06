@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Soesterberg - Stemerdingweg",
+    "nameEn": "Soesterberg - Stemerdingweg",
+    "address": "Stemerdingweg 23, 3769 CE, Soesterberg",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar met fiets auto en ov.",
+    "descriptionEn": "Accessible by bicycle, car and public transport.",
+    "latitude": 52.122604135162796,
+    "longitude": 5.27559,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

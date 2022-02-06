@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Nieuwegein - Fahrenheitbaan",
+    "nameEn": "Nieuwegein - Fahrenheitbaan",
+    "address": "Fahrenheitbaan 1, 3439 MD, Nieuwegein",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar per auto, fiets en ov",
+    "descriptionEn": "Accessible by car, bicycle and public transport\n",
+    "latitude": 52.03446668639807,
+    "longitude": 5.109266313494863,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

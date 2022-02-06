@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Deventer - Koningsbergenstraat",
+    "nameEn": "Deventer - Koningsbergenstraat",
+    "address": "Koningsbergenstraat 6, 7418 ER, Deventer",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar met fiets auto en ov.",
+    "descriptionEn": "Accessible by bicycle, car and public transport.",
+    "latitude": 52.24089990398069,
+    "longitude": 6.20057067918329,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

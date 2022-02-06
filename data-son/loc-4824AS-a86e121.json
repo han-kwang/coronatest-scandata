@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Breda - Weidehek",
+    "nameEn": "Breda - Weidehek",
+    "address": "Weidehek 30F, 4824 AS, Breda",
+    "distanceInKm": "####",
+    "descriptionNl": "De locatie is gelegen in de nabijheid van diverse snelwegen. Zowel de A16, A27 en de N285 zijn binnen enkele minuten bereikbaar. Aan de weg kunt u gratis parkeren. U bent gemiddeld binnen 5 minuten weer klaar. \nIndien u op de fiets bent, dan kunt u, uw fiets stallen aan de openbare weg. Volg de instructies van de medewerkers",
+    "descriptionEn": "The location is located in close proximity to several highways. The A16, A27 and N285 can be reached within a few minutes. You can park for free on the road. You are ready within 5 minutes on average.\nIf you are on a bicycle, you can park your bicycle on the public road. Follow the instructions of the employees",
+    "latitude": 51.614632772498204,
+    "longitude": 4.754689340671066,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Coronareistesten - Samenwerkingspartner GGD",
+        "nameEn": "Coronareistesten - Samenwerkingspartner GGD",
+        "termsNl": "https://coronareistesten.nl/algemene-voorwaarden/",
+        "termsEn": "https://coronareistesten.nl/algemene-voorwaarden/",
+        "privacyStatementNl": "https://coronareistesten.nl/privacystatement/",
+        "privacyStatementEn": "https://coronareistesten.nl/privacystatement/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

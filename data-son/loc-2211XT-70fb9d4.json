@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Noordwijkerhout - Langelaan",
+    "nameEn": "Noordwijkerhout - Langelaan",
+    "address": "Langelaan 3, 2211 XT, Noordwijkerhout",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar per auto, fiets en ov.",
+    "descriptionEn": "Accessible by car, bicycle and public transport.\n",
+    "latitude": 52.25209,
+    "longitude": 4.472026355830875,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

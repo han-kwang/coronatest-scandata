@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Hengelo - Hazenweg",
+    "nameEn": "Hengelo - Hazenweg",
+    "address": "Hazenweg 61, 7556 BM, Hengelo",
+    "distanceInKm": "####",
+    "descriptionNl": "Er is geen aanvullende bereikbaarheidsinformatie beschikbaar voor deze locatie",
+    "descriptionEn": "There is no further accessibility information available for this location.",
+    "latitude": 52.28773,
+    "longitude": 6.77933,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "COVIDTest Nederland - Samenwerkingspartner GGD",
+        "nameEn": "COVIDTest Nederland - Samenwerkingspartner GGD",
+        "termsNl": "https://covidtestnederland.nl/algemene-voorwaarden/",
+        "termsEn": "https://covidtestnederland.nl/algemene-voorwaarden/ ",
+        "privacyStatementNl": "https://covidtestnederland.nl/privacy/",
+        "privacyStatementEn": "https://covidtestnederland.nl/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

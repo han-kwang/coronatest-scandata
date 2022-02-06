@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Zutphen - Zweedsestraat",
+    "nameEn": "Zutphen - Zweedsestraat",
+    "address": "Zweedsestraat 8, 7202 CK, Zutphen",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar met fiets auto en ov.",
+    "descriptionEn": "Accessible by bicycle, car and public transport.\n",
+    "latitude": 52.15655912403946,
+    "longitude": 6.2086627558276835,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

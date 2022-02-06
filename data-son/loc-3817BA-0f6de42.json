@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Amersfoort - Stadsring ",
+    "nameEn": "Amersfoort - Stadsring ",
+    "address": "Stadsring 141, 3817 BA, Amersfoort",
+    "distanceInKm": "####",
+    "descriptionNl": "U kunt uw auto parkeren voor de deur, met de fiets komen of met het OV. Volg de borden.",
+    "descriptionEn": "You can park in front of the entrance. ",
+    "latitude": 52.15253,
+    "longitude": 5.39135,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Lead Healthcare Covid Services - Samenwerkingspartner GGD",
+        "nameEn": "Lead Healthcare Covid Services - Samenwerkingspartner GGD",
+        "termsNl": "https://www.leadhealthcare-covidservices.nl/general-terms",
+        "termsEn": "https://www.leadhealthcare-covidservices.nl/general-terms",
+        "privacyStatementNl": "https://www.leadhealthcare-covidservices.nl/privacy-statement",
+        "privacyStatementEn": "https://www.leadhealthcare-covidservices.nl/privacy-statement",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Oss - Griekenweg",
+    "nameEn": "Oss - Griekenweg",
+    "address": "Griekenweg 29, 5342 PX, Oss",
+    "distanceInKm": "####",
+    "descriptionNl": "Testlocatie op industrieterrein in oude (auto)showroom. Duidelijk aangeduid met bewegwijzering Spoedtestcorona. Voldoende parkeergelegenheid aanwezig.",
+    "descriptionEn": "Test location is located at an (former) car dealership. Plenty of parking available.",
+    "latitude": 51.75455,
+    "longitude": 5.5563,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "nameEn": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "termsNl": "https://testenvoortoegang.spoedtestcorona.nl/terms",
+        "termsEn": "https://testenvoortoegang.spoedtestcorona.nl/terms/en",
+        "privacyStatementNl": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy",
+        "privacyStatementEn": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy/en",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

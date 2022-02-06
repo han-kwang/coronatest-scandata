@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Nijmegen - Lindenhoutseweg",
+    "nameEn": "Nijmegen - Lindenhoutseweg",
+    "address": "Lindenhoutseweg 30, 6545 AJ, Nijmegen",
+    "distanceInKm": "####",
+    "descriptionNl": "U kan het terrein oprijden en er is achteraan voldoende parkeergelegenheid. Volg daarna de borden naar TESTEN VOOR KLACHTEN.",
+    "descriptionEn": "Drive on the premisses and there is sufficient parking at the back. Follow the signs towards TESTING WITH COMPLAINTS (Testen voor klachten).",
+    "latitude": 51.84627,
+    "longitude": 5.80912,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "nameEn": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "termsNl": "https://testenvoortoegang.spoedtestcorona.nl/terms",
+        "termsEn": "https://testenvoortoegang.spoedtestcorona.nl/terms/en",
+        "privacyStatementNl": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy",
+        "privacyStatementEn": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy/en",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

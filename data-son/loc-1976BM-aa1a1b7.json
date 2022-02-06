@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "IJmuiden - Kromhoutstraat",
+    "nameEn": "IJmuiden - Kromhoutstraat",
+    "address": "Kromhoutstraat 50, 1976 BM, IJmuiden",
+    "distanceInKm": "####",
+    "descriptionNl": "De teststraat ligt parallel aan de weg naar het strand. Met de auto kun je de teststraat inrijden.",
+    "descriptionEn": "The test street is parallel to the road to the beach. By car you can enter the test street.",
+    "latitude": 52.4548471,
+    "longitude": 4.5848085,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Alegria Health - Samenwerkingspartner GGD",
+        "nameEn": "Alegria Health - Samenwerkingspartner GGD",
+        "termsNl": "https://www.alegriahealth.com/wpautoterms/terms-and-conditions\n\n",
+        "termsEn": "https://www.alegriahealth.com/wpautoterms/terms-and-conditions\n\n",
+        "privacyStatementNl": "https://www.alegriahealth.com/wpautoterms/privacy-policy\n\n",
+        "privacyStatementEn": "https://www.alegriahealth.com/wpautoterms/privacy-policy\n\n",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

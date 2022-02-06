@@ -6,7 +6,7 @@ Author: Han-Kwang Nienhuys (@hk_nien on Twitter).
 Copyright:
 
 * Code: open source according to the MIT license; see LICENSE file.
-* Data: public domain. Credits would be appreciated, though. 
+* Data: public domain. Credits would be appreciated, though.
 
 Since this data is mostly of interest to people in the Netherlands,
 the rest of the documentation will be in Dutch.
@@ -28,7 +28,7 @@ gedaan:
   dezelfde bedrijven maar op andere locaties en de financiering werkt
   vermoedelijk anders dan bij Testen voor Toegang.
 - Commerciële aanbieders voor negatief-certificaten voor internationale
-  reizigers. 
+  reizigers.
 
 Ik volg sinds zomer 2021 de beschikbaarheid van GGD-testafspraken, zie
 [Google sheets](https://docs.google.com/spreadsheets/d/1tUJHU7qbeDf71HaQ3vDfdWGr3q56DXYSfiZ18PuEqZ4/edit?usp=sharing)
@@ -56,6 +56,10 @@ Bestanden
   hieronder.
 - `data-son/son_scan-latest.csv`: symbolic link naar meest recente
   son_scan-bestand.
+- `data-son/loc-*.json`: informatie over de locaties in JSON-formaat.
+  Bestandsnaam `loc-{postcode}-{hash}.json`. Een aantal velden zijn
+  vervangen door `'####'` omdat die mogelijk niet-relevante wijzingen
+  ondergaan.
 - `son_analyze.py`: simpel script voor analyse van son_scan bestand.
 
 ### Kolommen in data-son/son_scan-*.csv
@@ -64,7 +68,7 @@ Bestanden
 - `apt_date`: Datum YYYY-mm-dd van de testafspraak (CET).
 - `short_addr`: postcodecijfers en plaats van de testlocatie.
 - `num_booked`: aantal boekingen voor deze dag, vanaf scan_time.
-- `num_slots`: testcapaciteit voor hetzelfde tijdsinterval. 
+- `num_slots`: testcapaciteit voor hetzelfde tijdsinterval.
 - `num_booked_2h`: aantal boekingen tot 2 uur vooruit.
 - `num_slots_2h`: aantal slots tot 2 uur vooruit.
 - `num_booked_45m`: aantal boekingen tot 45 minuten vooruit.
@@ -85,4 +89,3 @@ Let op:
   CSV-bestand makkelijker leesbaar te maken voor mensen.
 - Volgorde van kolommen kan wijzigen. Gebruik de kolomtitels op de
   eerste regel van elk CSV-bestand.
-

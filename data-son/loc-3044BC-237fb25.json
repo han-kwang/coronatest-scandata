@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Rotterdam - Van Nelleweg",
+    "nameEn": "Rotterdam - Van Nelleweg",
+    "address": "Van Nelleweg 1, 3044 BC, Rotterdam",
+    "distanceInKm": "####",
+    "descriptionNl": "Terrein betreden via de speedgate van de Van Nelle fabriek (hek tegenover Schuttevaerweg 93). Trek een kaartje uit de parkeerautomaat (bij vertrek ontvangt u van ons een gratis uitrijkaart) en sla linksaf. Volg deze weg tot u uitkomt bij het testcentrum.",
+    "descriptionEn": "Enter the terrain thru the Van Nelle facory speedgate (across Schuttevaerweg 93) and take a ticket. Turn left and follow the road till you reacht the test center. Upon departing you will receive a parking voucher from us.",
+    "latitude": 51.92357,
+    "longitude": 4.43191,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "nameEn": "Spoedtestcorona - Samenwerkingspartner GGD",
+        "termsNl": "https://testenvoortoegang.spoedtestcorona.nl/terms",
+        "termsEn": "https://testenvoortoegang.spoedtestcorona.nl/terms/en",
+        "privacyStatementNl": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy",
+        "privacyStatementEn": "https://testenvoortoegang.spoedtestcorona.nl/privacy-policy/en",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

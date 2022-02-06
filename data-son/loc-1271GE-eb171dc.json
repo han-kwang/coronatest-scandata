@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Huizen - IJsselmeerstraat",
+    "nameEn": "Huizen - IJsselmeerstraat",
+    "address": "IJsselmeerstraat 314, 1271 GE, Huizen",
+    "distanceInKm": "####",
+    "descriptionNl": "bereikbaar met fiets, auto en ov",
+    "descriptionEn": "accessible by bicycle, car and public transport",
+    "latitude": 52.30842825432992,
+    "longitude": 5.240610813620218,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

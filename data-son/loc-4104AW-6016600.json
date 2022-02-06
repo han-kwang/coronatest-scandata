@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Culemborg - Beesdseweg",
+    "nameEn": "Culemborg - Beesdseweg",
+    "address": "Beesdseweg 1a, 4104 AW, Culemborg",
+    "distanceInKm": "####",
+    "descriptionNl": "Bereikbaar met fiets auto en ov.",
+    "descriptionEn": "Accessible by bicycle, car and public transport.",
+    "latitude": 51.94305559576501,
+    "longitude": 5.227834055820458,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Plus - Samenwerkingspartner GGD",
+        "nameEn": "Covid Plus - Samenwerkingspartner GGD",
+        "termsNl": "https://covidplus.nl/voorwaarden/",
+        "termsEn": "https://covidplus.nl/en/terms/",
+        "privacyStatementNl": "https://covidplus.nl/privacy/",
+        "privacyStatementEn": "https://covidplus.nl/en/privacy/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}
