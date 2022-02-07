@@ -1,0 +1,41 @@
+
+===== scan 2022-02-07 00:06 =====
+* Aantal locaties: 22.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          215/10035 (2.1%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 7544 Enschede (44/960), 8013 Zwolle (23/1100), 3044 Rotterdam (22/936)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          47/17247 (0.3%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 1078 Amsterdam (11/360), 3044 Rotterdam (7/936), 8013 Zwolle (7/1100)
+
+===== scan 2022-02-07 07:50 =====
+* Aantal locaties: 19.
+* Verdwenen: 2182 Hillegom, 2211 Noordwijkerhout, 7202 Zutphen.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          224/10034 (2.2%)
+  - Gebruikt (2h):     81/1521 (5.3%)
+  - Gebruikt (45m):    33/479 (6.9%)
+  - Top-3: 7544 Enschede (45/960), 6545 Nijmegen (26/624), 8013 Zwolle (24/1100)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          41/17247 (0.2%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 1078 Amsterdam (11/360), 8013 Zwolle (7/1100), 3044 Rotterdam (7/936)
+
+===== scan 2022-02-07 10:50 =====
+* Aantal locaties: 19.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          335/7643 (4.4%)
+  - Gebruikt (2h):     163/1738 (9.4%)
+  - Gebruikt (45m):    86/653 (13.2%)
+  - Top-3: 7544 Enschede (54/720), 8013 Zwolle (54/900), 6545 Nijmegen (38/480)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          70/17247 (0.4%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 1078 Amsterdam (19/360), 3044 Rotterdam (10/936), 8013 Zwolle (7/1100)
