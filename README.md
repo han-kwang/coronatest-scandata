@@ -25,10 +25,11 @@ gedaan:
   symptomen. De testen worden afgenomen door commerciële aanbieders.
 - Testen bij drukte/Testen bij Klachten, ook bij SON. GGD kan sinds 27
   januari doorverwijzen naar SON (antigeentests). Kosteloos. Uitvoering door
-  dezelfde bedrijven maar op andere locaties en de financiering werkt
-  vermoedelijk anders dan bij Testen voor Toegang.
+  dezelfde bedrijven als Testen voor Toegang, maar op andere locaties en met
+  vermoedelijk andere financieringsconstructie.
 - Commerciële aanbieders voor negatief-certificaten voor internationale
-  reizigers.
+  reizigers (PCR en antigeen). Meest dezelfde aanbieders, maar de reiziger
+  betaalt.
 
 Ik volg sinds zomer 2021 de beschikbaarheid van GGD-testafspraken, zie
 [Google sheets](https://docs.google.com/spreadsheets/d/1tUJHU7qbeDf71HaQ3vDfdWGr3q56DXYSfiZ18PuEqZ4/edit?usp=sharing)
@@ -47,7 +48,7 @@ Systeemeisen
 ------------
 De code is geschreven voor de Python-omgeving van [Anaconda3
 2021.11](https://repo.anaconda.com/archive/) in Linux, in het
-bijzonder: Python 3.7 met Pandas. Ik gebruik zelf Spyder
+bijzonder: Python 3.8 met Pandas. Ik gebruik zelf Spyder
 om interactief te werken en te debuggen.
 
 Bestanden
@@ -61,6 +62,9 @@ Bestanden
   vervangen door `'####'` omdat die mogelijk niet-relevante wijzingen
   ondergaan.
 - `son_analyze.py`: simpel script voor analyse van son_scan bestand.
+- `summary-*.txt`: samenvatting van elke scan (gegenereerd door
+  `son_analyze.py`), gebundeld per week. De opmaak van dit bestand kan
+  met terugwerkende kracht wijzigen.
 
 ### Kolommen in data-son/son_scan-*.csv
 
@@ -72,6 +76,8 @@ Bestanden
 - `num_booked_2h`: aantal boekingen tot 2 uur vooruit.
 - `num_slots_2h`: aantal slots tot 2 uur vooruit.
 - `num_booked_45m`: aantal boekingen tot 45 minuten vooruit.
+  Dit zijn de eerstvolgende drie slots van 15 minuten; hopelijk
+  representatief voor de werkelijk gebruikte capaciteit.
 - `num_slots_45m`: aantal slots tot 45 minuten vooruit.
 - `first_tm`: eerst beschikbare afspraaktijd (HH:MM) of '-----' indien
    er geen slots waren.
