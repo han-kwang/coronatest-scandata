@@ -235,3 +235,39 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 "2022-02-07 17:50",2022-02-08,"8013 Zwolle",14,1100,0,0,0,0,09:00,19:45,"Covid Plus",True,cdd0d57
 "2022-02-07 17:50",2022-02-08,"7556 Hengelo",6,720,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,254ae1c
 "2022-02-07 17:50",2022-02-08,"7544 Enschede",8,720,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,ad67fdb
+#,,,,,,,,,,,,,
+#scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,first_tm,last_tm,company,is_active,loc_id_hash
+"2022-02-07 19:50",2022-02-07,"1976 IJmuiden",0,0,0,0,0,0,-----,-----,"Alegria Health",True,aa1a1b7
+"2022-02-07 19:50",2022-02-07,"2131 Hoofddorp",0,0,0,0,0,0,-----,-----,CoronasneltestNederland.nl,True,fc0c947
+"2022-02-07 19:50",2022-02-07,"1271 Huizen",0,0,0,0,0,0,-----,-----,"Covid Plus",True,eb171dc
+"2022-02-07 19:50",2022-02-07,"2544 Den Haag",11,20,11,20,8,15,20:00,20:45,Coronareistesten,True,fbce685
+"2022-02-07 19:50",2022-02-07,"3817 Amersfoort",0,0,0,0,0,0,-----,-----,"Lead Healthcare Covid Services",True,0f6de42
+"2022-02-07 19:50",2022-02-07,"3439 Nieuwegein",0,0,0,0,0,0,20:00,21:45,"Covid Plus",True,8a1a170
+"2022-02-07 19:50",2022-02-07,"3044 Rotterdam",10,72,10,72,6,54,20:00,20:45,Spoedtestcorona,True,237fb25
+"2022-02-07 19:50",2022-02-07,"4104 Culemborg",0,0,0,0,0,0,-----,-----,"Covid Plus",True,6016600
+"2022-02-07 19:50",2022-02-07,"4824 Breda",1,120,1,120,1,45,20:00,21:45,Coronareistesten,True,a86e121
+"2022-02-07 19:50",2022-02-07,"4815 Breda",2,72,2,72,2,54,20:00,20:45,Spoedtestcorona,True,3c7ff3b
+"2022-02-07 19:50",2022-02-07,"5121 Rijen",0,24,0,24,0,18,20:00,20:45,Spoedtestcorona,True,8fe4ee0
+"2022-02-07 19:50",2022-02-07,"5342 Oss",6,48,6,48,6,36,20:00,20:45,Spoedtestcorona,True,46b000b
+"2022-02-07 19:50",2022-02-07,"6545 Nijmegen",10,48,10,48,8,36,20:00,20:45,Spoedtestcorona,True,313c321
+"2022-02-07 19:50",2022-02-07,"7418 Deventer",0,0,0,0,0,0,-----,-----,"Covid Plus",True,883ac04
+"2022-02-07 19:50",2022-02-07,"8013 Zwolle",0,0,0,0,0,0,-----,-----,"Covid Plus",True,cdd0d57
+"2022-02-07 19:50",2022-02-07,"7556 Hengelo",0,0,0,0,0,0,-----,-----,"COVIDTest Nederland",True,254ae1c
+"2022-02-07 19:50",2022-02-07,"7544 Enschede",0,0,0,0,0,0,-----,-----,"COVIDTest Nederland",True,ad67fdb
+"2022-02-07 19:50",2022-02-08,"1976 IJmuiden",4,624,0,0,0,0,08:00,19:45,"Alegria Health",True,aa1a1b7
+"2022-02-07 19:50",2022-02-08,"2131 Hoofddorp",0,0,0,0,0,0,08:00,17:45,CoronasneltestNederland.nl,True,fc0c947
+"2022-02-07 19:50",2022-02-08,"1271 Huizen",10,10,0,0,0,0,08:00,19:45,"Covid Plus",True,eb171dc
+"2022-02-07 19:50",2022-02-08,"2544 Den Haag",32,960,0,0,0,0,10:00,21:45,Coronareistesten,True,fbce685
+"2022-02-07 19:50",2022-02-08,"3817 Amersfoort",11,420,0,0,0,0,09:30,19:45,"Lead Healthcare Covid Services",True,0f6de42
+"2022-02-07 19:50",2022-02-08,"3439 Nieuwegein",13,13,0,0,0,0,08:00,21:45,"Covid Plus",True,8a1a170
+"2022-02-07 19:50",2022-02-08,"3044 Rotterdam",15,936,0,0,0,0,08:00,20:45,Spoedtestcorona,True,237fb25
+"2022-02-07 19:50",2022-02-08,"4104 Culemborg",13,850,0,0,0,0,08:30,16:45,"Covid Plus",True,6016600
+"2022-02-07 19:50",2022-02-08,"4824 Breda",1,660,0,0,0,0,09:00,19:45,Coronareistesten,True,a86e121
+"2022-02-07 19:50",2022-02-08,"4815 Breda",10,936,0,0,0,0,08:00,20:45,Spoedtestcorona,True,3c7ff3b
+"2022-02-07 19:50",2022-02-08,"5121 Rijen",4,312,0,0,0,0,08:00,20:45,Spoedtestcorona,True,8fe4ee0
+"2022-02-07 19:50",2022-02-08,"5342 Oss",8,624,0,0,0,0,08:00,20:45,Spoedtestcorona,True,46b000b
+"2022-02-07 19:50",2022-02-08,"6545 Nijmegen",10,624,0,0,0,0,08:00,20:45,Spoedtestcorona,True,313c321
+"2022-02-07 19:50",2022-02-08,"7418 Deventer",1,1,0,0,0,0,08:00,19:45,"Covid Plus",True,883ac04
+"2022-02-07 19:50",2022-02-08,"8013 Zwolle",19,1100,0,0,0,0,09:00,19:45,"Covid Plus",True,cdd0d57
+"2022-02-07 19:50",2022-02-08,"7556 Hengelo",6,720,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,254ae1c
+"2022-02-07 19:50",2022-02-08,"7544 Enschede",11,720,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,ad67fdb
