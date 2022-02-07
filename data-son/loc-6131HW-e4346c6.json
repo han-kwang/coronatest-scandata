@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Sittard - Rosmolenstraat",
+    "nameEn": "Sittard - Rosmolenstraat",
+    "address": "Rosmolenstraat 17, 6131 HW, Sittard",
+    "distanceInKm": "####",
+    "descriptionNl": "Deze locatie is gelegen in het stadscentrum van Sittard. U kunt redelijk parkeren in de buurt, maar ook met de fiets of te voet is de locatie gemakkelijk te bereiken. ",
+    "descriptionEn": "This location is located in the city center of Sittard. You can park reasonably nearby, but the location is also easy to reach by bike or on foot.",
+    "latitude": 50.99685,
+    "longitude": 5.86961,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Lead Healthcare Covid Services - Samenwerkingspartner GGD",
+        "nameEn": "Lead Healthcare Covid Services - Samenwerkingspartner GGD",
+        "termsNl": "https://www.leadhealthcare-covidservices.nl/general-terms",
+        "termsEn": "https://www.leadhealthcare-covidservices.nl/general-terms",
+        "privacyStatementNl": "https://www.leadhealthcare-covidservices.nl/privacy-statement",
+        "privacyStatementEn": "https://www.leadhealthcare-covidservices.nl/privacy-statement",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

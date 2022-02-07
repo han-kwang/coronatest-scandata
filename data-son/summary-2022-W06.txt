@@ -94,3 +94,16 @@
   - Gebruikt (2h):     0/0 (-- %)
   - Gebruikt (45m):    0/0 (-- %)
   - Top-3: 2544 Den Haag (32/960), 8013 Zwolle (19/1100), 3044 Rotterdam (15/936)
+
+===== scan 2022-02-07 21:50 =====
+* Aantal locaties: 18.
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          216/9750 (2.2%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 2544 Den Haag (41/960), 8013 Zwolle (23/1100), 7544 Enschede (18/720)
+* Scan afspraak op 2022-02-09:
+  - Gebruikt:          53/12047 (0.4%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 7418 Deventer (26/960), 3044 Rotterdam (6/936), 8013 Zwolle (5/1100)
