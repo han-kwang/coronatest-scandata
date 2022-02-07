@@ -39,3 +39,16 @@
   - Gebruikt (2h):     0/0 (-- %)
   - Gebruikt (45m):    0/0 (-- %)
   - Top-3: 1078 Amsterdam (19/360), 3044 Rotterdam (10/936), 8013 Zwolle (7/1100)
+
+===== scan 2022-02-07 15:28 =====
+* Aantal locaties: 18.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          276/3762 (7.3%)
+  - Gebruikt (2h):     153/1647 (9.3%)
+  - Gebruikt (45m):    70/637 (11.0%)
+  - Top-3: 8013 Zwolle (68/450), 2131 Hoofddorp (32/100), 2544 Den Haag (31/110)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          101/15727 (0.6%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 2544 Den Haag (14/220), 3769 Soesterberg (12/2800), 3044 Rotterdam (11/936)
