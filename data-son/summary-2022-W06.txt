@@ -1,6 +1,6 @@
-
 ===== scan 2022-02-07 00:06 =====
 * Aantal locaties: 22.
+* Geen wijzigingen in locaties.
 * Scan afspraak op 2022-02-07:
   - Gebruikt:          215/10035 (2.1%)
   - Gebruikt (2h):     0/0 (-- %)
@@ -42,6 +42,7 @@
 
 ===== scan 2022-02-07 15:28 =====
 * Aantal locaties: 18.
+* Verdwenen: 1078 Amsterdam.
 * Scan afspraak op 2022-02-07:
   - Gebruikt:          276/3762 (7.3%)
   - Gebruikt (2h):     153/1647 (9.3%)
@@ -52,3 +53,31 @@
   - Gebruikt (2h):     0/0 (-- %)
   - Gebruikt (45m):    0/0 (-- %)
   - Top-3: 2544 Den Haag (14/220), 3769 Soesterberg (12/2800), 3044 Rotterdam (11/936)
+
+===== scan 2022-02-07 15:50 =====
+* Aantal locaties: 18.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          246/3338 (7.4%)
+  - Gebruikt (2h):     153/1597 (9.6%)
+  - Gebruikt (45m):    71/637 (11.1%)
+  - Top-3: 8013 Zwolle (64/400), 2131 Hoofddorp (25/80), 2544 Den Haag (25/100)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          107/15727 (0.7%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 2544 Den Haag (14/220), 3769 Soesterberg (12/2800), 3439 Nieuwegein (12/2800)
+
+===== scan 2022-02-07 17:50 =====
+* Aantal locaties: 17.
+* Verdwenen: 3769 Soesterberg.
+* Scan afspraak op 2022-02-07:
+  - Gebruikt:          155/1740 (8.9%)
+  - Gebruikt (2h):     142/1336 (10.6%)
+  - Gebruikt (45m):    49/501 (9.8%)
+  - Top-3: 8013 Zwolle (50/200), 2544 Den Haag (22/60), 6545 Nijmegen (18/144)
+* Scan afspraak op 2022-02-08:
+  - Gebruikt:          125/10880 (1.1%)
+  - Gebruikt (2h):     0/0 (-- %)
+  - Gebruikt (45m):    0/0 (-- %)
+  - Top-3: 2544 Den Haag (21/960), 3044 Rotterdam (15/936), 8013 Zwolle (14/1100)
