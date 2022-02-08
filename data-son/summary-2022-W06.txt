@@ -90,3 +90,28 @@
 * Scan afspraak op 2022-02-09:
   - Geboekt      : 53/12047 (0.4%)
   - Top-3: 7418 Deventer (26/960), 3044 Rotterdam (6/936), 8013 Zwolle (5/1100)
+
+===== scan 2022-02-08 07:50 =====
+* Aantal locaties: 18.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-08:
+  - Geboekt      : 311/9750 (3.2%)
+  - Geboekt (2h) : 112/1266 (8.8%)
+  - Geboekt (45m): 45/378 (11.9%)
+  - Top-3: 2544 Den Haag (53/960), 7556 Hengelo (41/720), 7544 Enschede (37/720)
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 60/12047 (0.5%)
+  - Top-3: 7418 Deventer (30/960), 2544 Den Haag (6/960), 3044 Rotterdam (6/936)
+
+===== scan 2022-02-08 09:50 =====
+* Aantal locaties: 18.
+* Nieuw: 3769 Soesterberg.
+* Verdwenen: 2131 Hoofddorp.
+* Scan afspraak op 2022-02-08:
+  - Geboekt      : 376/8493 (4.4%)
+  - Geboekt (2h) : 212/1701 (12.5%)
+  - Geboekt (45m): 126/641 (19.7%)
+  - Top-3: 2544 Den Haag (66/960), 7544 Enschede (54/600), 8013 Zwolle (50/1000)
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 87/14847 (0.6%)
+  - Top-3: 7418 Deventer (42/960), 2544 Den Haag (8/960), 3044 Rotterdam (8/936)
