@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Lelystad - Larserpoortweg",
+    "nameEn": "Lelystad - Larserpoortweg",
+    "address": "Larserpoortweg 32, 8218 NK, Lelystad",
+    "distanceInKm": "####",
+    "descriptionNl": "How Are You Diagnostics, Larserpoortweg 32, 8218 NK, Lelystad",
+    "descriptionEn": "How Are You Diagnostics, Larserpoortweg 32, 8218 NK, Lelystad",
+    "latitude": 52.47545,
+    "longitude": 5.50918,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "HOW ARE YOU Diagnostics - Samenwerkingspartner GGD",
+        "nameEn": "HOW ARE YOU Diagnostics - Samenwerkingspartner GGD",
+        "termsNl": "https://howareyoudiagnostics.com/algemene-voorwaarden/",
+        "termsEn": "https://howareyoudiagnostics.com/en/algemene-voorwaarden/",
+        "privacyStatementNl": "https://howareyoudiagnostics.com/privacy-verklaring/",
+        "privacyStatementEn": "https://howareyoudiagnostics.com/en/privacy-verklaring/",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}

@@ -4,8 +4,8 @@
     "nameEn": "Hengelo - Hazenweg",
     "address": "Hazenweg 61, 7556 BM, Hengelo",
     "distanceInKm": "####",
-    "descriptionNl": "Er is geen aanvullende bereikbaarheidsinformatie beschikbaar voor deze locatie",
-    "descriptionEn": "There is no further accessibility information available for this location.",
+    "descriptionNl": "De testlocatie bevindt zich naast het oude gemeentehuis",
+    "descriptionEn": "Testing is located nearby the former city hall.",
     "latitude": 52.28773,
     "longitude": 6.77933,
     "testProvider": {
