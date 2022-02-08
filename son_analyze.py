@@ -94,6 +94,7 @@ def analyze_son_csv(
         ('', 'Geboekt'),
         ('_2h', 'Geboekt (2h)'),
         ('_45m', 'Geboekt (45m)'),
+        ('_15m', 'Geboekt (15m)')
         ]
     prev_addresses = set()
 

@@ -73,12 +73,11 @@ Bestanden
 - `short_addr`: postcodecijfers en plaats van de testlocatie.
 - `num_booked`: aantal boekingen voor deze dag, vanaf scan_time.
 - `num_slots`: testcapaciteit voor hetzelfde tijdsinterval.
-- `num_booked_2h`: aantal boekingen tot 2 uur vooruit.
-- `num_slots_2h`: aantal slots tot 2 uur vooruit.
-- `num_booked_45m`: aantal boekingen tot 45 minuten vooruit.
-  Dit zijn de eerstvolgende drie slots van 15 minuten; hopelijk
+- `num_booked_2h`, `num_slots_2h`: aantal boekingen/slots tot 2 uur vooruit.
+- `num_booked_45m`, `num_slots_45m`: aantal boekingen/slots tot 45 minuten vooruit.
+- `num_booked_15m`, `num_slots_15m`: aantal boekingen/capaciteit tot
+  15 minuten vooruit. Dit is het eerstvolgende slot van 15 minuten;
   representatief voor de werkelijk gebruikte capaciteit.
-- `num_slots_45m`: aantal slots tot 45 minuten vooruit.
 - `first_tm`: eerst beschikbare afspraaktijd (HH:MM) of '-----' indien
    er geen slots waren.
 - `last_tm`: laatst beschikbare afspraaktijd (HH:MM) of '-----'.
