@@ -43,7 +43,7 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 2022-02-05 23:26,2022-02-07,8013 Zwolle,6,1100,0,0,0,0,0,0,09:00,19:45,Covid Plus,True,cdd0d57
 2022-02-05 23:26,2022-02-07,7556 Hengelo,3,1560,0,0,0,0,0,0,08:00,19:45,COVIDTest Nederland,True,254ae1c
 2022-02-05 23:26,2022-02-07,7544 Enschede,30,960,0,0,0,0,0,0,08:00,19:45,COVIDTest Nederland,True,ad67fdb
-#,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,is_active,loc_id_hash
 2022-02-06 10:54,2022-02-06,1976 IJmuiden,13,180,3,40,0,0,0,0,11:00,19:45,Alegria Health,True,aa1a1b7
 2022-02-06 10:54,2022-02-06,1078 Amsterdam,32,240,16,60,0,0,0,0,11:00,17:45,CoronasneltestNederland.nl,True,609a4ce
@@ -87,7 +87,7 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 2022-02-06 10:55,2022-02-07,8013 Zwolle,8,1100,0,0,0,0,0,0,08:00,20:45,Covid Plus,True,cdd0d57
 2022-02-06 10:55,2022-02-07,7556 Hengelo,4,1560,0,0,0,0,0,0,09:00,19:45,COVIDTest Nederland,True,254ae1c
 2022-02-06 10:55,2022-02-07,7544 Enschede,30,960,0,0,0,0,0,0,08:00,19:45,COVIDTest Nederland,True,ad67fdb
-#,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,is_active,loc_id_hash
 2022-02-06 13:32,2022-02-06,1976 IJmuiden,14,125,7,40,6,15,0,0,13:45,19:45,Alegria Health,True,aa1a1b7
 2022-02-06 13:32,2022-02-06,1078 Amsterdam,18,170,8,80,4,30,0,0,13:45,17:45,CoronasneltestNederland.nl,True,609a4ce
@@ -177,7 +177,7 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 2022-02-06 13:34,2022-02-07,8013 Zwolle,8,1100,0,0,0,0,0,0,09:00,19:45,Covid Plus,True,cdd0d57
 2022-02-06 13:34,2022-02-07,7556 Hengelo,4,1560,0,0,0,0,0,0,08:00,19:45,COVIDTest Nederland,True,254ae1c
 2022-02-06 13:34,2022-02-07,7544 Enschede,33,960,0,0,0,0,0,0,08:00,19:45,COVIDTest Nederland,True,ad67fdb#
-#,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,loc_id_hash,is_active
 "2022-02-06 15:03",2022-02-06,"1976 IJmuiden",8,95,5,40,0,15,0,0,15:15,19:45,"Alegria Health",True,aa1a1b7
 "2022-02-06 15:03",2022-02-06,"1078 Amsterdam",15,110,8,80,3,30,0,0,15:15,17:45,CoronasneltestNederland.nl,True,609a4ce
@@ -223,7 +223,7 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 "2022-02-06 15:04",2022-02-07,"8013 Zwolle",9,1100,0,0,0,0,0,0,09:00,19:45,"Covid Plus",True,cdd0d57
 "2022-02-06 15:05",2022-02-07,"7556 Hengelo",3,1560,0,0,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,254ae1c
 "2022-02-06 15:05",2022-02-07,"7544 Enschede",35,960,0,0,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,ad67fdb
-#,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,is_active,loc_id_hash
 "2022-02-06 17:13",2022-02-06,"1976 IJmuiden",4,55,4,40,3,15,0,0,17:15,19:45,"Alegria Health",True,aa1a1b7
 "2022-02-06 17:13",2022-02-06,"1078 Amsterdam",15,30,15,30,15,30,0,0,17:15,17:45,CoronasneltestNederland.nl,True,609a4ce
@@ -267,7 +267,7 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 "2022-02-06 17:14",2022-02-07,"8013 Zwolle",9,1100,0,0,0,0,0,0,09:00,19:45,"Covid Plus",True,cdd0d57
 "2022-02-06 17:14",2022-02-07,"7556 Hengelo",4,1560,0,0,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,254ae1c
 "2022-02-06 17:14",2022-02-07,"7544 Enschede",35,960,0,0,0,0,0,0,08:00,19:45,"COVIDTest Nederland",True,ad67fdb
-#,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,is_active,loc_id_hash
 "2022-02-06 19:16",2022-02-06,"1976 IJmuiden",1,10,1,10,1,10,0,0,19:30,19:45,"Alegria Health",True,aa1a1b7
 "2022-02-06 19:16",2022-02-06,"2131 Hoofddorp",0,0,0,0,0,0,0,0,-----,-----,CoronasneltestNederland.nl,True,fc0c947

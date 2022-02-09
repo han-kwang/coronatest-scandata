@@ -263,3 +263,25 @@
 * Scan afspraak op 2022-02-10:
   - Geboekt      : 97/13019 (0.7%)
   - Top-3: 2544 Den Haag (15/640), 3439 Nieuwegein (15/2000), 3044 Rotterdam (10/720)
+
+===== scan 2022-02-09 19:50 =====
+* Aantal locaties: 20.
+* Nieuw: 2803 Gouda.
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 28/824 (3.4%)
+  - Geboekt (2h) : 28/824 (3.4%)
+  - Geboekt (45m): 26/408 (6.4%)
+  - Geboekt (15m): 9/136 (6.6%)
+  - Top-3: 6545 Nijmegen (10/48), 2544 Den Haag (6/160), 3044 Rotterdam (6/72)
+* Scan afspraak op 2022-02-10:
+  - Geboekt      : 137/17482 (0.8%)
+  - Top-3: 2544 Den Haag (19/1600), 3439 Nieuwegein (15/0), 3044 Rotterdam (14/864)
+
+===== scan 2022-02-09 21:55 =====
+* Aantal locaties: 20.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-10:
+  - Geboekt      : 161/17906 (0.9%)
+  - Top-3: 2544 Den Haag (20/1760), 3439 Nieuwegein (18/0), 7556 Hengelo (16/720)
+* Scan afspraak op 2022-02-11:
+  - Top-3: 1976 IJmuiden (0/0), 1271 Huizen (0/0), 7556 Hengelo (0/0)

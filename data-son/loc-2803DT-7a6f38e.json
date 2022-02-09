@@ -1,0 +1,25 @@
+{
+    "id": "####",
+    "nameNl": "Gouda - Heuvellaan",
+    "nameEn": "Gouda - Heuvellaan",
+    "address": "Heuvellaan 1, 2803 DT, Gouda ",
+    "distanceInKm": "####",
+    "descriptionNl": "De locatie bevindt zich op het parkeerdek aan de heuvellaan exact achter  het gebouw van de bowlingbaan op parkeerdek van sportpark Groenheuvel. De locatie is goed te bereiken en genoeg parkeerplaatsen aanwezig. ",
+    "descriptionEn": "The location is located on the parking deck on the hill avenue exactly behind the bowling alley building on the parking deck of the Groenheuvel sports park. The location is easily accessible and there are enough parking spaces available.",
+    "latitude": 52.0226578,
+    "longitude": 4.6898076,
+    "testProvider": {
+        "id": "####",
+        "nameNl": "Covid Consult - Samenwerkingspartner GGD",
+        "nameEn": "Covid Consult - Samenwerkingspartner GGD",
+        "termsNl": "https://www.covidconsult.nl/gebruiksvoorwaarden",
+        "termsEn": "https://www.covidconsult.nl/terms-of-use\u00a0\u00a0",
+        "privacyStatementNl": "https://www.covidconsult.nl/privacy-policy\u00a0\u00a0",
+        "privacyStatementEn": "https://www.covidconsult.nl/privacy-policy-1",
+        "supportEmail": "####",
+        "supportPhoneNumber": "####"
+    },
+    "isActive": true,
+    "locationIdentifier": "####",
+    "testTypeId": "####"
+}
