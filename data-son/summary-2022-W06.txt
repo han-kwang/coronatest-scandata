@@ -224,3 +224,42 @@
 * Scan afspraak op 2022-02-10:
   - Geboekt      : 30/5358 (0.6%)
   - Top-3: 3439 Nieuwegein (6/800), 3044 Rotterdam (5/288), 7556 Hengelo (5/240)
+
+===== scan 2022-02-09 13:50 =====
+* Aantal locaties: 19.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 246/7841 (3.1%)
+  - Geboekt (2h) : 131/2352 (5.6%)
+  - Geboekt (45m): 79/882 (9.0%)
+  - Geboekt (15m): 55/294 (18.7%)
+  - Top-3: 8013 Zwolle (42/600), 7418 Deventer (40/480), 2544 Den Haag (26/640)
+* Scan afspraak op 2022-02-10:
+  - Geboekt      : 45/8270 (0.5%)
+  - Top-3: 3439 Nieuwegein (10/1200), 2544 Den Haag (6/320), 3044 Rotterdam (6/432)
+
+===== scan 2022-02-09 15:50 =====
+* Aantal locaties: 19.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 183/5489 (3.3%)
+  - Geboekt (2h) : 103/2337 (4.4%)
+  - Geboekt (45m): 50/882 (5.7%)
+  - Geboekt (15m): 29/294 (9.9%)
+  - Top-3: 8013 Zwolle (36/400), 7418 Deventer (35/320), 2544 Den Haag (23/480)
+* Scan afspraak op 2022-02-10:
+  - Geboekt      : 72/11142 (0.6%)
+  - Top-3: 3439 Nieuwegein (12/1600), 2544 Den Haag (9/480), 3044 Rotterdam (9/576)
+
+===== scan 2022-02-09 17:50 =====
+* Aantal locaties: 19.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-09:
+  - Geboekt      : 121/3152 (3.8%)
+  - Geboekt (2h) : 109/2328 (4.7%)
+  - Geboekt (45m): 43/873 (4.9%)
+  - Geboekt (15m): 25/291 (8.6%)
+  - Top-3: 8013 Zwolle (20/200), 7418 Deventer (20/160), 2544 Den Haag (16/320)
+* Scan afspraak op 2022-02-10:
+  - Geboekt      : 97/13019 (0.7%)
+  - Top-3: 2544 Den Haag (15/640), 3439 Nieuwegein (15/2000), 3044 Rotterdam (10/720)
