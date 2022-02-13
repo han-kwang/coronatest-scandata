@@ -1,68 +1,69 @@
 
-===== scan 2022-02-05 23:26 =====
-* Aantal locaties: 22.
-* Scan afspraak op 2022-02-06:
-  - Geboekt      : 383/13922 (2.8%)
-  - Top-3: 3044 Rotterdam (47/648), 8013 Zwolle (46/1100), 2211 Noordwijkerhout (30/1600)
-* Scan afspraak op 2022-02-07:
-  - Geboekt      : 83/22589 (0.4%)
-  - Top-3: 7544 Enschede (30/960), 2211 Noordwijkerhout (10/1600), 8013 Zwolle (6/1100)
-
 ===== scan 2022-02-06 10:54 =====
 * Aantal locaties: 21.
 * Verdwenen: 4153 Beesd.
 * Scan afspraak op 2022-02-06:
-  - Geboekt      : 448/10264 (4.4%)
-  - Geboekt (2h) : 228/2775 (8.2%)
-  - Top-3: 8013 Zwolle (55/900), 3044 Rotterdam (53/504), 2211 Noordwijkerhout (39/1000)
+  - Niet beschikbaar: 3439 Nie, 3769 Soe, 4104 Cul, 7544 Ens.
+  - Geboekt      : 416/10232 (4.1%)
+  - Geboekt (2h) : 213/2760 (7.7%)
+  - Top: 8013 Zw (55/900), 3044 Ro (53/504), 2211 No (39/1000), 7418 De (32/720), 1078 Am (32/240), 2182 Hi (29/240)
 * Scan afspraak op 2022-02-07:
+  - Niet beschikbaar: 1078 Amsterdam, 1976 IJmuiden.
   - Geboekt      : 90/22589 (0.4%)
-  - Top-3: 7544 Enschede (30/960), 2211 Noordwijkerhout (9/1600), 8013 Zwolle (8/1100)
+  - Top: 7544 En (30/960), 2211 No (9/1600), 8013 Zw (8/1100), 3769 So (6/2800), 2803 Go (5/3675), 3439 Ni (5/2800)
 
 ===== scan 2022-02-06 13:32 =====
 * Aantal locaties: 22.
 * Nieuw: 2544 Den Haag.
 * Scan afspraak op 2022-02-06:
-  - Geboekt      : 474/14622 (3.2%)
-  - Geboekt (2h) : 308/5588 (5.5%)
-  - Geboekt (45m): 180/2174 (8.3%)
-  - Top-3: 3044 Rotterdam (29/306), 3044 Rotterdam (29/306), 8013 Zwolle (28/625)
+  - Niet beschikbaar: 3439 Nie, 3769 Soe, 4104 Cul, 7544 Ens.
+  - Geboekt      : 450/14598 (3.1%)
+  - Geboekt (2h) : 298/5578 (5.3%)
+  - Geboekt (45m): 172/2166 (7.9%)
+  - Top: 3044 Ro (29/306), 3044 Ro (29/306), 8013 Zw (28/625), 8013 Zw (28/625), 2211 No (23/50), 2211 No (23/50)
 * Scan afspraak op 2022-02-07:
-  - Geboekt      : 228/39646 (0.6%)
-  - Top-3: 7544 Enschede (33/960), 7544 Enschede (33/960), 2211 Noordwijkerhout (12/0)
+  - Niet beschikbaar: 1078 Ams, 1976 IJm, 7202 Zut, 7418 Dev.
+  - Geboekt      : 216/39634 (0.5%)
+  - Top: 7544 En (33/960), 7544 En (33/960), 3439 Ni (12/2800), 3439 Ni (12/2800), 2211 No (12/0), 2211 No (12/0)
 
 ===== scan 2022-02-06 15:03 =====
 * Aantal locaties: 22.
 * Geen wijzigingen in locaties.
 * Scan afspraak op 2022-02-06:
-  - Geboekt      : 189/4725 (4.0%)
-  - Geboekt (2h) : 153/2535 (6.0%)
+  - Niet beschikbaar: 1271 Hui, 3439 Nie, 3769 Soe, 4104 Cul, 7202 Zut, 7544 Ens.
+  - Geboekt      : 180/4716 (3.8%)
+  - Geboekt (2h) : 146/2528 (5.8%)
   - Geboekt (45m): 71/948 (7.5%)
-  - Top-3: 3044 Rotterdam (28/198), 7418 Deventer (25/380), 8013 Zwolle (18/475)
+  - Top: 3044 Ro (28/198), 7418 De (25/380), 8013 Zw (18/475), 6545 Ni (16/132), 7556 He (16/330), 1078 Am (15/110)
 * Scan afspraak op 2022-02-07:
-  - Geboekt      : 124/13042 (1.0%)
-  - Top-3: 7544 Enschede (35/960), 2211 Noordwijkerhout (12/0), 3439 Nieuwegein (11/11)
+  - Niet beschikbaar: 1078 Ams, 1271 Hui, 1976 IJm, 3439 Nie, 3769 Soe, 7202 Zut, 7418 Dev.
+  - Geboekt      : 99/13017 (0.8%)
+  - Top: 7544 En (35/960), 2211 No (12/0), 2803 Go (10/3675), 8013 Zw (9/1100), 4815 Br (6/936), 3044 Ro (5/936)
 
 ===== scan 2022-02-06 17:13 =====
 * Aantal locaties: 21.
 * Verdwenen: 2803 Gouda.
 * Scan afspraak op 2022-02-06:
-  - Geboekt      : 87/1791 (4.9%)
-  - Geboekt (2h) : 79/1180 (6.7%)
+  - Niet beschikbaar: 1271 Hui, 3439 Nie, 3769 Soe, 4104 Cul, 7202 Zut, 7544 Ens.
+  - Geboekt      : 85/1789 (4.8%)
+  - Geboekt (2h) : 78/1179 (6.6%)
   - Geboekt (45m): 67/703 (9.5%)
-  - Top-3: 1078 Amsterdam (15/30), 3044 Rotterdam (14/54), 7418 Deventer (14/46)
+  - Top: 1078 Am (15/30), 3044 Ro (14/54), 7418 De (14/46), 8013 Zw (11/275), 7556 He (9/90), 3817 Am (6/30)
 * Scan afspraak op 2022-02-07:
-  - Geboekt      : 126/9367 (1.3%)
-  - Top-3: 7544 Enschede (35/960), 2211 Noordwijkerhout (12/0), 3439 Nieuwegein (11/11)
+  - Niet beschikbaar: 1078 Ams, 1271 Hui, 1976 IJm, 3439 Nie, 3769 Soe, 7202 Zut, 7418 Dev.
+  - Geboekt      : 101/9342 (1.1%)
+  - Top: 7544 En (35/960), 2211 No (12/0), 8013 Zw (9/1100), 3044 Ro (7/936), 4815 Br (7/936), 5342 Os (7/624)
 
 ===== scan 2022-02-06 19:16 =====
 * Aantal locaties: 22.
 * Nieuw: 2131 Hoofddorp.
 * Scan afspraak op 2022-02-06:
-  - Geboekt      : 27/516 (5.2%)
-  - Geboekt (2h) : 27/486 (5.6%)
-  - Geboekt (45m): 25/261 (9.6%)
-  - Top-3: 4824 Breda (8/150), 8013 Zwolle (6/50), 2544 Den Haag (6/300)
+  - Niet beschikbaar: 1271 Hui, 3439 Nie, 3769 Soe, 4104 Cul, 7202 Zut, 7418 Dev, 7544 Ens.
+  - Geboekt      : 21/510 (4.1%)
+  - Geboekt (2h) : 21/480 (4.4%)
+  - Geboekt (45m): 19/255 (7.5%)
+  - Top: 4824 Br (8/150), 2544 De (6/300), 8013 Zw (6/50), 1976 IJ (1/10)
 * Scan afspraak op 2022-02-07:
-  - Geboekt      : 167/9747 (1.7%)
-  - Top-3: 7544 Enschede (42/960), 3044 Rotterdam (18/936), 8013 Zwolle (13/1100)
+  - Niet beschikbaar: 1078 Ams, 1271 Hui, 1976 IJm, 3439 Nie, 3769 Soe, 7202 Zut, 7418 Dev.
+  - Geboekt      : 142/9722 (1.5%)
+  - Top: 7544 En (42/960), 3044 Ro (18/936), 8013 Zw (13/1100), 2211 No (12/0), 6545 Ni (10/624), 4815 Br (9/936)
