@@ -41,8 +41,13 @@ Git-repository is voor de data en code om de data te analyseren. De
 code om de data te verzamelen van het online boekingssysteem is niet
 openbaar.
 
-Vooralsnog alleen data van SON Testen bij Klachten. Ik ben van plan
-meer data bescihkbaar te maken.
+Bij het afsprakensysteem van SON was er data beschikbaar over de exacte
+capaciteit van de testlocaties, d.w.z. hoeveel testafspraken er precies gemaakt
+werden en beschikbaar waren in elk slot van 15 minuten. Deze informatie zag je
+niet in de web-interface, maar werd wel door je browser opgehaald. Helaas,
+enkele dagen nadat ik hierover twitterde hebben (op 10 februari) werd die
+informatie weggehaald.
+
 
 Systeemeisen
 ------------
@@ -61,10 +66,15 @@ Bestanden
   Bestandsnaam `loc-{postcode}-{hash}.json`. Een aantal velden zijn
   vervangen door `'####'` omdat die mogelijk niet-relevante wijzingen
   ondergaan.
-- `son_analyze.py`: simpel script voor analyse van son_scan bestand.
-- `summary-*.txt`: samenvatting van elke scan (gegenereerd door
+- `data-son/summary-*.txt`: samenvatting van elke scan (gegenereerd door
   `son_analyze.py`), gebundeld per week. De opmaak van dit bestand kan
   met terugwerkende kracht wijzigen.
+- `data-ggd/ggd_scan-{YYYY}-W{ww}.csv`: GGD scan data, per week.
+- `data-ggd/ggd_locations.csv`: GGD locatiebeschrijving (volledig adres
+  etc.).
+- `son_analyze.py`: simpel script voor analyse van son_scan bestand.
+- `coronatest_analyze_csv.py`: script om ggd_scan-*.csv te converteren
+  naar scores (1-7).
 
 ### Kolommen in data-son/son_scan-*.csv
 
@@ -73,6 +83,8 @@ Bestanden
 - `short_addr`: postcodecijfers en plaats van de testlocatie.
 - `num_booked`: aantal boekingen voor deze dag, vanaf scan_time.
 - `num_slots`: testcapaciteit voor hetzelfde tijdsinterval.
+   Tot 10 februari waren `num_booked` en `num_slots` het werkelijke
+   aantal boekingen; daarna alleen het aantal beschikbare tijdslots.
 - `num_booked_2h`, `num_slots_2h`: aantal boekingen/slots tot 2 uur vooruit.
 - `num_booked_45m`, `num_slots_45m`: aantal boekingen/slots tot 45 minuten vooruit.
 - `num_booked_15m`, `num_slots_15m`: aantal boekingen/capaciteit tot
@@ -82,13 +94,38 @@ Bestanden
    er geen slots waren.
 - `last_tm`: laatst beschikbare afspraaktijd (HH:MM) of '-----'.
 - `company`: naam uitvoerend bedrijf.
+- `all_slots`: complete agenda vanaf first_tm; bijv. '-X---' voor vijf
+  slots waarvan de tweede ('X') niet beschikbaar is.
 - `is_active`: boolean; komt uit de API. Onduidelijk of deze ooit False
   kan zijn.
 - `loc_id_hash`: hash van locatie (hexadecimaal). Kan nuttig zijn als
   het werk wordt overgenomen door een ander bedrijf of als er twee
   testlocaties op dezelfde postcodecijfers zitten.
+- `api_version`: 1 voor volledige boekingsinformatie; 2 voor alleen het
+  aantal tijdslots (vanaf 10 februari). Kolom ontbreekt in oudere data.
+- `xfields`: verdwenen of nieuwe velden (als SON de API wijzigt).
+  Ontbreekt in oudere data.
 
-Let op:
+### Kolommen in data-ggd/ggd_scan-*.csv
+
+- `scan_time`: Datum/tijd 'YYYY-mm-dd HH:MM' van de scan (tijdzone CET).
+- `req_date`: Datum (YYYY-mm-dd) van de gewenste afspraakdatum.
+- `req_pc4`: Gevraagde postcode (fietsafstand).
+- `opt0_short_addr`: optie 0, verkort adres (postcodecijfers + woonplaats)
+- `opt0_time`: optie 0, afspraaktijd (YYYY-mm-dd HH:MM)
+- `opt0_loc_id`: optie 0, locatie-ID (postcode+hash); verwijst naar
+   ggd_locations.csv.
+- `opt1_short_addr`, `opt1_time`, `opt1_loc_id`: zelfde voor optie 1.
+- `opt2_short_addr`, `opt2_time`, `opt2_loc_id`: zelfde voor optie 2.
+
+### Kolommen in data-ggd/ggd_locations.csv
+
+- `loc_id`: locatie ID (postcodecijfers+hash). Als er iets aan de locatie verandert
+  (adres, bereikbaarheid), dan verandert deze ID ook.
+- `first_seen`, `last_seen`: eerste en laatste afspraakdatum (YYYY-mm-dd).
+- Overige kolommen spreken voor zich.
+
+### Let op:
 
 - Negeer regels die beginnen met `#`. Die zijn bedoeld om het
   CSV-bestand makkelijker leesbaar te maken voor mensen.

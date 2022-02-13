@@ -18,6 +18,22 @@ import datetime
 import pandas as pd
 import numpy as np
 
+def _get_1csv_df(csv_fname):
+    """Load csv, return df; handle data without api_version, all_slots column"""
+    df = pd.read_csv(csv_fname, comment='#')
+    if 'api_version' not in df.columns:
+        df['api_version'] = 1
+    if 'xfields' not in df.columns:
+        df['xfields'] = ''
+    else:
+        df.loc[df['xfields'].isna(), 'xfields'] = ''
+    if 'all_slots' not in df.columns:
+        df['all_slots'] = ''
+    else:
+        df.loc[df['all_slots'].isna(), 'all_slots'] = ''
+    return df
+
+
 def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
     """Load CSV file(s) and do minor preprocessing.
 
@@ -39,10 +55,7 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
     else:
         csv_fnames = list(csv_fname)
 
-    df_list = [
-        pd.read_csv(fn, comment='#')
-        for fn in csv_fnames
-        ]
+    df_list = [_get_1csv_df(fn) for fn in csv_fnames]
     df_list = sorted(df_list, key=lambda df: df.iloc[0]['scan_time'])
     df = pd.concat(df_list).reset_index().drop(columns='index')
     df['scan_time'] = pd.to_datetime(df['scan_time'])
@@ -55,10 +68,119 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
 
     return df, scan_start_tms
 
+
+def _analyze_1scan_loc_mutations(df1, prev_addresses, silent=False):
+    """Analyze DataFrame for one scan for location mutations.
+
+    Params:
+
+    - df1: 1-scan dataframe slice
+    - prev_addresses: set of previous-scan addresess; will be updated.
+    - silent: True to suppress output.
+    """
+    addresses = set(df1['short_addr'].unique())
+    tm0 = df1.iloc[0]['scan_time']
+
+    if not silent:
+        print(f'\n===== scan {tm0.strftime("%Y-%m-%d %H:%M")} =====')
+        print(f'* Aantal locaties: {len(addresses)}.')
+        if addresses == prev_addresses:
+            print('* Geen wijzigingen in locaties.')
+        else:
+            appeared = sorted(addresses - prev_addresses)
+            disappd = sorted(prev_addresses - addresses)
+            if appeared:
+                print(f'* Nieuw: {", ".join(appeared)}.')
+            if disappd:
+                print(f'* Verdwenen: {", ".join(disappd)}.')
+
+    prev_addresses.clear()
+    prev_addresses.update(addresses)
+
+
+def _analyze_1scan_slot_stats(df1):
+    """Analyze DataFrame for one scan; print output.
+
+    Params:
+
+    - df1: 1-scan dataframe slice
+    """
+    # booking categories (name suffix, text label)
+    book_cats = [
+        ('', 'Geboekt      '),
+        ('_2h', 'Geboekt (2h) '),
+        ('_45m', 'Geboekt (45m)'),
+        ('_15m', 'Geboekt (15m)')
+        ]
+    if 2 in df1['api_version'].values:
+        book_cats = [
+            (s, l.replace('Geboekt', 'Volgeboekt'))
+            for s, l in book_cats
+            ]
+
+    apt_dates = sorted(df1['apt_date'].unique())
+    for apt_date in apt_dates:
+        apt_date_str = pd.Timestamp(apt_date).strftime('%Y-%m-%d')
+        print(f'* Scan afspraak op {apt_date_str}:')
+        select1 = df1['apt_date'] == apt_date
+        df2 = df1.loc[select1].copy()
+
+        # Special handling of locations with all slots booked.
+        # That usually means that the location is not open.
+        df2['last_tm'] = pd.to_datetime(f'{apt_date_str}T' + df2['last_tm'])
+        suspicious_mask = (
+            (df2['last_tm'] - df2['scan_time'] > pd.Timedelta(15, 'min'))
+            & (df2['num_slots'] == df2['num_booked'])
+            )
+        susp_locs = sorted(df2.loc[suspicious_mask, 'short_addr'].unique())
+        if susp_locs:
+            if len(susp_locs) > 7:
+                nlocs = len(df2['short_addr'].unique())
+                susp_locs = [f'{len(susp_locs)}/{nlocs} locaties']
+            elif len(susp_locs) > 3:
+                susp_locs = [x[:8] for x in susp_locs]  # just postcode
+            print(f'  - Niet beschikbaar: {", ".join(susp_locs)}.')
+
+        # Detect locations with a limited hours; pattern '----XXXX------'
+        partial_mask = df2['all_slots'].str.match('-{4,}X{4,}-*$')
+        if partial_mask.sum() > 0:
+            locs = sorted(df2.loc[partial_mask, 'short_addr'].unique())
+            if len(locs) > 4:
+                locs = [f'{x[:8]}' for x in locs]
+            print(f'  - Beperkt open: {", ".join(locs)}.')
+        suspicious_mask |= partial_mask
+
+        # highest booking rates of the rest
+        df3 = df2.loc[~suspicious_mask]
+        sums = {}
+        for suffix, _ in book_cats:
+            sums[f's{suffix}'] = df3[f'num_slots{suffix}'].sum()
+            sums[f'b{suffix}'] = df3[f'num_booked{suffix}'].sum()
+        ntop = 6
+        df4 = df3.loc[df3['num_booked'] > 0].sort_values('num_booked', ascending=False)
+        loc_slice = slice(None, None) if len(df4) <= 3 else slice(0, 7)
+        topbooks = [
+            f'{row["short_addr"][loc_slice]} ({row["num_booked"]}/{row["num_slots"]})'
+            for _, row in df4.iloc[:ntop].iterrows()
+            ]
+        percent = lambda a, b: f'{100*a/b:.1f}%' if b > 0 else '-- %'
+        for suffix, label in book_cats:
+            a, b = sums[f'b{suffix}'], sums[f's{suffix}']
+            if b > 0:
+                print(f'  - {label}: {a}/{b} ({percent(a, b)})')
+                if a == 0:
+                    break
+
+        if topbooks:
+            topbooks_str = ", ".join(topbooks)
+            print(f'  - Top: {topbooks_str}')
+
+
+
+
 def analyze_son_csv(
         csv_fname='data-son/son_scan-latest.csv',
         islice=(0, None), trange=None,
-        first_notnew=True
         ):
     """Analyze SON csv data; print results.
 
@@ -89,63 +211,17 @@ def analyze_son_csv(
     scan_start_tms.append(scan_start_tms[-1] + pd.Timedelta('1h'))
     # Add one so that each scan can be treated as interval.
 
-    # booking categories (name suffix, text label)
-    book_cats = [
-        ('', 'Geboekt'),
-        ('_2h', 'Geboekt (2h)'),
-        ('_45m', 'Geboekt (45m)'),
-        ('_15m', 'Geboekt (15m)')
-        ]
     prev_addresses = set()
 
     for i_scan in iscans:
         tm0, tm1 = scan_start_tms[i_scan:i_scan+2]
-        do_output = (trange[0] <= tm0 < trange[1])
+        silent = not (trange[0] <= tm0 < trange[1]) or i_scan == iscans[0]
         select = (df['scan_time'] >= tm0) & (df['scan_time'] < tm1)
         df1 = df.loc[select]
-        addresses = set(df1['short_addr'].unique())
+        _analyze_1scan_loc_mutations(df1, prev_addresses, silent=silent)
+        if not silent:
+            _analyze_1scan_slot_stats(df1)
 
-        if do_output:
-            print(f'\n===== scan {tm0.strftime("%Y-%m-%d %H:%M")} =====')
-            print(f'* Aantal locaties: {len(addresses)}.')
-            if addresses == prev_addresses:
-                print('* Geen wijzigingen in locaties.')
-            else:
-                appeared = sorted(addresses - prev_addresses)
-                disappd = sorted(prev_addresses - addresses)
-                if appeared and (not first_notnew or i_scan != iscans[0]):
-                    print(f'* Nieuw: {", ".join(appeared)}.')
-                if disappd:
-                    print(f'* Verdwenen: {", ".join(disappd)}.')
-
-        prev_addresses = addresses
-        if not do_output:
-            continue
-
-        apt_dates = sorted(df1['apt_date'].unique())
-        for apt_date in apt_dates:
-            apt_date_str = pd.Timestamp(apt_date).strftime('%Y-%m-%d')
-            print(f'* Scan afspraak op {apt_date_str}:')
-            select1 = df['apt_date'] == apt_date
-            df2 = df1.loc[select1]
-            sums = {}
-            for suffix, _ in book_cats:
-                sums[f's{suffix}'] = df2[f'num_slots{suffix}'].sum()
-                sums[f'b{suffix}'] = df2[f'num_booked{suffix}'].sum()
-            # biggest bookings
-            ntop = 3
-            df3 = df2.sort_values('num_booked', ascending=False)
-            topbooks = [
-                f'{row["short_addr"]} ({row["num_booked"]}/{row["num_slots"]})'
-                for _, row in df3.iloc[:ntop].iterrows()
-                ]
-            topbooks = ", ".join(topbooks)
-            percent = lambda a, b: f'{100*a/b:.1f}%' if b > 0 else '-- %'
-            for suffix, label in book_cats:
-                a, b = sums[f'b{suffix}'], sums[f's{suffix}']
-                if b > 0:
-                    print(f'  - {label:<13}: {a}/{b} ({percent(a, b)})')
-            print(f'  - Top-{ntop}: {topbooks}')
 
 def analyze_son_csv_autofind(nfiles=3, islice=(-30, None), yearweek=None):
     """Analysis of multiple recent csv files, autodetect them.
@@ -197,7 +273,7 @@ def run_cmdline(*args):
         )
         sys.exit(1)
 
-    islice = None
+    islice = (-30, None)
     yearweek = None
     if len(argv) == 2:
         arg = argv[1]
