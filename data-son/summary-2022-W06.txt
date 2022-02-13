@@ -432,3 +432,55 @@
   - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
   - Volgeboekt      : 15/401 (3.7%)
   - Top: 5342 Os (5/12), 3817 Am (4/38), 6131 Si (4/42), 4815 Br (1/13), 6545 Ni (1/12)
+
+===== scan 2022-02-13 11:55 =====
+* Aantal locaties: 14.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-13:
+  - Niet beschikbaar: 3769 Soe, 3817 Ame, 6131 Sit, 7202 Zut, 7418 Dev, 8013 Zwo.
+  - Volgeboekt      : 10/187 (5.3%)
+  - Volgeboekt (2h) : 8/64 (12.5%)
+  - Volgeboekt (45m): 3/24 (12.5%)
+  - Volgeboekt (15m): 1/8 (12.5%)
+  - Top: 4815 Breda (10/24)
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+  - Volgeboekt      : 16/401 (4.0%)
+  - Top: 5342 Os (5/12), 3817 Am (4/38), 6131 Si (4/42), 4815 Br (2/13), 6545 Ni (1/12)
+
+===== scan 2022-02-13 13:55 =====
+* Aantal locaties: 14.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-13:
+  - Niet beschikbaar: 3769 Soe, 3817 Ame, 6131 Sit, 7202 Zut, 7418 Dev, 8013 Zwo.
+  - Volgeboekt      : 2/123 (1.6%)
+  - Volgeboekt (2h) : 2/63 (3.2%)
+  - Volgeboekt (45m): 2/24 (8.3%)
+  - Volgeboekt (15m): 1/8 (12.5%)
+  - Top: 4815 Breda (2/16)
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+  - Volgeboekt      : 17/401 (4.2%)
+  - Top: 5342 Os (5/12), 3817 Am (4/38), 6131 Si (4/42), 4815 Br (2/13), 6545 Ni (2/12)
+
+===== scan 2022-02-13 15:55 =====
+* Aantal locaties: 14.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-13:
+  - Niet beschikbaar: 3769 Soe, 3817 Ame, 6131 Sit, 7202 Zut, 7418 Dev, 8013 Zwo.
+  - Volgeboekt      : 0/60 (0.0%)
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+  - Volgeboekt      : 17/401 (4.2%)
+  - Top: 5342 Os (5/12), 3817 Am (4/38), 6131 Si (4/42), 4815 Br (2/13), 6545 Ni (2/12)
+
+===== scan 2022-02-13 17:55 =====
+* Aantal locaties: 14.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-13:
+  - Niet beschikbaar: 3769 Soe, 7202 Zut, 7418 Dev, 8013 Zwo.
+  - Volgeboekt      : 0/8 (0.0%)
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+  - Volgeboekt      : 20/401 (5.0%)
+  - Top: 5342 Os (5/12), 4815 Br (5/13), 3817 Am (4/38), 6131 Si (4/42), 6545 Ni (2/12)
