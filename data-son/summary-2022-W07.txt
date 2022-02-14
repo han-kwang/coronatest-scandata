@@ -1,0 +1,29 @@
+
+===== scan 2022-02-14 07:55 =====
+* Aantal locaties: 10.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-14:
+  - Volgeboekt      : 32/357 (9.0%)
+  - Volgeboekt (2h) : 16/68 (23.5%)
+  - Volgeboekt (45m): 5/22 (22.7%)
+  - Volgeboekt (15m): 0/7 (0.0%)
+  - Top: 4815 Br (11/13), 5342 Os (9/12), 3817 Am (4/38), 6545 Ni (4/12), 6131 Si (4/42)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 4815 Breda, 5342 Oss, 6545 Nijmegen.
+  - Volgeboekt      : 8/306 (2.6%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
+
+===== scan 2022-02-14 09:55 =====
+* Aantal locaties: 9.
+* Verdwenen: 7202 Zutphen.
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 4815 Breda, 5342 Oss, 6545 Nijmegen.
+  - Beperkt open: 7418 Deventer.
+  - Volgeboekt      : 8/196 (4.1%)
+  - Volgeboekt (2h) : 2/40 (5.0%)
+  - Volgeboekt (45m): 0/15 (0.0%)
+  - Top: 3817 Amersfoort (4/32), 6131 Sittard (4/40)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 4815 Bre, 5342 Oss, 6545 Nij, 7418 Dev.
+  - Volgeboekt      : 8/210 (3.8%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)

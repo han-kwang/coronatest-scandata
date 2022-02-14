@@ -484,3 +484,23 @@
   - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
   - Volgeboekt      : 20/401 (5.0%)
   - Top: 5342 Os (5/12), 4815 Br (5/13), 3817 Am (4/38), 6131 Si (4/42), 6545 Ni (2/12)
+
+===== scan 2022-02-13 19:55 =====
+* Aantal locaties: 13.
+* Verdwenen: 4824 Breda.
+* Scan afspraak op 2022-02-13:
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+  - Volgeboekt      : 27/357 (7.6%)
+  - Top: 4815 Br (9/13), 5342 Os (8/12), 3817 Am (4/38), 6131 Si (4/42), 6545 Ni (2/12)
+
+===== scan 2022-02-13 21:55 =====
+* Aantal locaties: 10.
+* Verdwenen: 1976 IJmuiden, 5121 Rijen, 8218 Lelystad.
+* Scan afspraak op 2022-02-14:
+  - Volgeboekt      : 30/357 (8.4%)
+  - Top: 4815 Br (11/13), 5342 Os (8/12), 3817 Am (4/38), 6131 Si (4/42), 6545 Ni (3/12)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 4815 Breda, 5342 Oss, 6545 Nijmegen.
+  - Volgeboekt      : 8/306 (2.6%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
