@@ -27,3 +27,54 @@
   - Niet beschikbaar: 4815 Bre, 5342 Oss, 6545 Nij, 7418 Dev.
   - Volgeboekt      : 8/210 (3.8%)
   - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
+
+===== scan 2022-02-14 11:55 =====
+* Aantal locaties: 6.
+* Verdwenen: 4815 Breda, 5342 Oss, 6545 Nijmegen.
+* Scan afspraak op 2022-02-14:
+  - Beperkt open: 7418 Deventer.
+  - Volgeboekt      : 6/156 (3.8%)
+  - Volgeboekt (2h) : 4/40 (10.0%)
+  - Volgeboekt (45m): 2/15 (13.3%)
+  - Volgeboekt (15m): 0/5 (0.0%)
+  - Top: 3817 Amersfoort (3/24), 6131 Sittard (3/32)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 8/210 (3.8%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
+
+===== scan 2022-02-14 13:55 =====
+* Aantal locaties: 6.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 2/116 (1.7%)
+  - Volgeboekt (2h) : 2/40 (5.0%)
+  - Volgeboekt (45m): 0/15 (0.0%)
+  - Top: 3817 Amersfoort (1/16), 6131 Sittard (1/24)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 8/210 (3.8%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
+
+===== scan 2022-02-14 15:55 =====
+* Aantal locaties: 6.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 0/76 (0.0%)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 8/210 (3.8%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
+
+===== scan 2022-02-14 17:55 =====
+* Aantal locaties: 6.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-14:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 0/36 (0.0%)
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 7418 Deventer.
+  - Volgeboekt      : 8/210 (3.8%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (2/24)
