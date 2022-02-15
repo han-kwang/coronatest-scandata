@@ -123,3 +123,52 @@
 * Scan afspraak op 2022-02-16:
   - Volgeboekt      : 10/226 (4.4%)
   - Top: 3817 Amersfoort (6/42), 6131 Sittard (4/40)
+
+===== scan 2022-02-15 11:55 =====
+* Aantal locaties: 5.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 8013 Zwolle.
+  - Volgeboekt      : 7/124 (5.6%)
+  - Volgeboekt (2h) : 2/32 (6.2%)
+  - Volgeboekt (45m): 1/12 (8.3%)
+  - Volgeboekt (15m): 0/4 (0.0%)
+  - Top: 3817 Amersfoort (5/32), 6131 Sittard (2/24)
+* Scan afspraak op 2022-02-16:
+  - Volgeboekt      : 10/226 (4.4%)
+  - Top: 3817 Amersfoort (6/42), 6131 Sittard (4/40)
+
+===== scan 2022-02-15 13:55 =====
+* Aantal locaties: 5.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-15:
+  - Niet beschikbaar: 8013 Zwolle.
+  - Volgeboekt      : 5/92 (5.4%)
+  - Volgeboekt (2h) : 3/32 (9.4%)
+  - Volgeboekt (45m): 1/12 (8.3%)
+  - Volgeboekt (15m): 0/4 (0.0%)
+  - Top: 3817 Amersfoort (3/24), 6131 Sittard (2/16)
+* Scan afspraak op 2022-02-16:
+  - Niet beschikbaar: 3817 Amersfoort, 6131 Sittard.
+  - Volgeboekt      : 0/144 (0.0%)
+
+===== scan 2022-02-15 15:55 =====
+* Aantal locaties: 4.
+* Verdwenen: 8013 Zwolle.
+* Scan afspraak op 2022-02-15:
+  - Volgeboekt      : 2/60 (3.3%)
+  - Volgeboekt (2h) : 2/32 (6.2%)
+  - Volgeboekt (45m): 0/12 (0.0%)
+  - Top: 3817 Amersfoort (2/16)
+* Scan afspraak op 2022-02-16:
+  - Niet beschikbaar: 3769 Soesterberg, 3817 Amersfoort, 6131 Sittard.
+  - Volgeboekt      : 0/52 (0.0%)
+
+===== scan 2022-02-15 17:55 =====
+* Aantal locaties: 4.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-15:
+  - Volgeboekt      : 0/28 (0.0%)
+* Scan afspraak op 2022-02-16:
+  - Niet beschikbaar: 3769 Soesterberg, 3817 Amersfoort, 6131 Sittard.
+  - Volgeboekt      : 0/52 (0.0%)
