@@ -223,3 +223,15 @@ scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,nu
 #scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,all_slots,is_active,loc_id_hash,api_version,xfields
 2022-02-16 17:55,2022-02-16,3044 Rotterdam,0,12,0,8,0,3,0,1,18:00,20:45,Spoedtestcorona,------------,True,237fb25,2,
 2022-02-16 17:55,2022-02-17,3044 Rotterdam,52,52,0,0,0,0,0,0,08:00,20:45,Spoedtestcorona,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,True,237fb25,2,
+#,,,,,,,,,,,,,,,,,,
+#scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,all_slots,is_active,loc_id_hash,api_version,xfields
+2022-02-16 19:55,2022-02-16,3044 Rotterdam,0,4,0,4,0,3,0,1,20:00,20:45,Spoedtestcorona,----,True,237fb25,2,
+2022-02-16 19:55,2022-02-17,3044 Rotterdam,52,52,0,0,0,0,0,0,08:00,20:45,Spoedtestcorona,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,True,237fb25,2,
+#,,,,,,,,,,,,,,,,,,
+#scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,all_slots,is_active,loc_id_hash,api_version,xfields
+2022-02-16 21:55,2022-02-17,3044 Rotterdam,52,52,0,0,0,0,0,0,08:00,20:45,Spoedtestcorona,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,True,237fb25,2,
+2022-02-16 21:55,2022-02-18,3044 Rotterdam,52,52,0,0,0,0,0,0,08:00,20:45,Spoedtestcorona,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,True,237fb25,2,
+#,,,,,,,,,,,,,,,,,,
+#scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,all_slots,is_active,loc_id_hash,api_version,xfields
+#,,,,,,,,,,,,,,,,,,
+#scan_time,apt_date,short_addr,num_booked,num_slots,num_booked_2h,num_slots_2h,num_booked_45m,num_slots_45m,num_booked_15m,num_slots_15m,first_tm,last_tm,company,all_slots,is_active,loc_id_hash,api_version,xfields

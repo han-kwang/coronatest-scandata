@@ -237,3 +237,19 @@
   - Volgeboekt      : 0/12 (0.0%)
 * Scan afspraak op 2022-02-17:
   - Niet beschikbaar: 3044 Rotterdam.
+
+===== scan 2022-02-16 19:55 =====
+* Aantal locaties: 1.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-16:
+  - Volgeboekt      : 0/4 (0.0%)
+* Scan afspraak op 2022-02-17:
+  - Niet beschikbaar: 3044 Rotterdam.
+
+===== scan 2022-02-16 21:55 =====
+* Aantal locaties: 1.
+* Geen wijzigingen in locaties.
+* Scan afspraak op 2022-02-17:
+  - Niet beschikbaar: 3044 Rotterdam.
+* Scan afspraak op 2022-02-18:
+  - Niet beschikbaar: 3044 Rotterdam.
