@@ -7,7 +7,7 @@
   - Volgeboekt (2h) : 16/68 (23.5%)
   - Volgeboekt (45m): 5/22 (22.7%)
   - Volgeboekt (15m): 0/7 (0.0%)
-  - Top: 4815 Br (11/13), 5342 Os (9/12), 3817 Am (4/38), 6545 Ni (4/12), 6131 Si (4/42)
+  - Top: 4815 Bre (11/13), 5342 Oss (9/12), 3817 Ame (4/38), 6545 Nij (4/12), 6131 Sit (4/42)
 * Scan afspraak op 2022-02-15:
   - Niet beschikbaar: 4815 Breda, 5342 Oss, 6545 Nijmegen.
   - Volgeboekt      : 8/306 (2.6%)
@@ -253,3 +253,11 @@
   - Niet beschikbaar: 3044 Rotterdam.
 * Scan afspraak op 2022-02-18:
   - Niet beschikbaar: 3044 Rotterdam.
+
+===== scan 2022-02-17 07:55 =====
+* Aantal locaties: 0.
+* Verdwenen: 3044 Rotterdam.
+
+===== scan 2022-02-18 07:55 =====
+* Aantal locaties: 0.
+* Geen wijzigingen in locaties.
