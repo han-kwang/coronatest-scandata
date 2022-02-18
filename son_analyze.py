@@ -50,7 +50,7 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
     Note: csv files will be put into chronological order, but it won't handle
     overlapping ranges for 'scan_time'.
     """
-    if isinstance(csv_fname, str):
+    if isinstance(csv_fname, (str, Path)):
         csv_fnames = [csv_fname]
     else:
         csv_fnames = list(csv_fname)
@@ -158,7 +158,7 @@ def _analyze_1scan_slot_stats(df1):
             sums[f'b{suffix}'] = df3[f'num_booked{suffix}'].sum()
         ntop = 6
         df4 = df3.loc[df3['num_booked'] > 0].sort_values('num_booked', ascending=False)
-        loc_slice = slice(None, None) if len(df4) <= 3 else slice(0, 7)
+        loc_slice = slice(None, None) if len(df4) <= 3 else slice(0, 8)
         topbooks = [
             f'{row["short_addr"][loc_slice]} ({row["num_booked"]}/{row["num_slots"]})'
             for _, row in df4.iloc[:ntop].iterrows()
@@ -174,8 +174,6 @@ def _analyze_1scan_slot_stats(df1):
         if topbooks:
             topbooks_str = ", ".join(topbooks)
             print(f'  - Top: {topbooks_str}')
-
-
 
 
 def analyze_son_csv(
@@ -258,6 +256,67 @@ def analyze_son_csv_autofind(nfiles=3, islice=(-30, None), yearweek=None):
         raise FileNotFoundError(f'data-son/{glob_pattern}')
     return analyze_son_csv(flist, islice=islice, trange=trange)
 
+
+def build_locs_table_by_day():
+    """Return DataFrame."""
+    fnames = sorted(Path('data-son').glob('son_scan-????-W??.csv'))
+    df, scan_tms = get_csv_as_dataframe(fnames)
+    # dict; key='yyyy-mm-dd', value=set(loc_names).
+    locs_by_date = {}
+    all_locs = set()
+    for i in range(len(scan_tms)-1):
+        mask = (df['scan_time'] >= scan_tms[i]) & (df['scan_time'] < scan_tms[i+1])
+        df1 = df.loc[mask]
+        apt_date = pd.Timestamp(df1['apt_date'].unique()[0])
+        apt_date_str = apt_date.strftime('%Y-%m-%d')
+        if apt_date not in locs_by_date:
+            locs_by_date[apt_date_str] = set()
+        loc_set = locs_by_date[apt_date_str]
+        df2 = df1.loc[df1['apt_date'] == apt_date]
+        for _, row in df2.iterrows():
+            if row['num_slots'] - row['num_booked'] > 0:
+                loc_set.add(row['short_addr'])
+                all_locs.add(row['short_addr'])
+
+    loc_df = pd.DataFrame(index=sorted(all_locs))
+    for ymd, locs in locs_by_date.items():
+        loc_df[ymd] = False
+        loc_df.loc[locs, ymd] = True
+
+    return loc_df
+    # janee = np.array(['n', 'j'])
+    # for col in loc_df.columns:
+    #     loc_df[col] = janee[loc_df[col].values.astype(int)]
+
+
+
+def plot_locs_table(loc_df):
+    """Plot table from result of build_locs_table_by_day()."""
+
+    import matplotlib.pyplot as plt
+    plt.close('all')
+    fig, ax = plt.subplots(
+        tight_layout=True,
+        figsize=(2+0.2*loc_df.shape[1], 2+0.2*loc_df.shape[0])
+        )
+    ax.matshow(loc_df, cmap='Greys', vmax=2)
+    ax.set_xticks(np.arange(loc_df.shape[1]))
+    ax.set_yticks(np.arange(loc_df.shape[0]))
+    ax.set_xticklabels(loc_df.columns, rotation=90)
+    ax.set_yticklabels(loc_df.index)
+    for i in range(loc_df.shape[0]):
+        for j in range(loc_df.shape[1]):
+            if loc_df.iloc[i, j]:
+                ax.text(j, i, 'J', ha='center', va='center')
+    for i in range(loc_df.shape[0]-1):
+        ax.axhline(i+0.5, color='#bbbbbb')
+    for j in range(loc_df.shape[1]-1):
+        ax.axvline(j+0.5, color='#bbbbbb')
+
+    fig.show()
+
+
+
 def run_cmdline(*args):
     if args:
         argv = ['call'] + [str(x) for x in args]
@@ -290,6 +349,8 @@ def run_cmdline(*args):
 if __name__ == '__main__':
     if 'SPYDER_ARGS' in os.environ:
         analyze_son_csv_autofind()
+        loc_df = build_locs_table_by_day()
+        plot_locs_table(loc_df)
     else:
         # command line
         run_cmdline()
