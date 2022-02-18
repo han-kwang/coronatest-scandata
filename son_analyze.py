@@ -60,6 +60,11 @@ def get_csv_as_dataframe(csv_fname='data-son/son_scan-latest.csv'):
     df = pd.concat(df_list).reset_index().drop(columns='index')
     df['scan_time'] = pd.to_datetime(df['scan_time'])
     df['apt_date'] = pd.to_datetime(df['apt_date'])
+    # Because of dummy rows, int columns become float.
+    for c in df.columns:
+        if c.startswith('num') and df[c].dtype != np.int64:
+            df.loc[df[c].isna(), c] = 0
+            df[c] = df[c].astype(int)
 
     # figure out scan periods
     dts = df['scan_time'].diff()
@@ -78,8 +83,13 @@ def _analyze_1scan_loc_mutations(df1, prev_addresses, silent=False):
     - prev_addresses: set of previous-scan addresess; will be updated.
     - silent: True to suppress output.
     """
-    addresses = set(df1['short_addr'].unique())
     tm0 = df1.iloc[0]['scan_time']
+
+    if len(df1) == 1 and pd.isna(df1.iloc[0]['apt_date']):
+        addresses = set()
+    else:
+        addresses = set(df1['short_addr'].unique())
+
 
     if not silent:
         print(f'\n===== scan {tm0.strftime("%Y-%m-%d %H:%M")} =====')
@@ -105,6 +115,8 @@ def _analyze_1scan_slot_stats(df1):
 
     - df1: 1-scan dataframe slice
     """
+    if len(df1) == 1 and pd.isna(df1.iloc[0]['apt_date']):
+        return
     # booking categories (name suffix, text label)
     book_cats = [
         ('', 'Geboekt      '),
