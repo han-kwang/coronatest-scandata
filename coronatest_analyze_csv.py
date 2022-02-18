@@ -7,6 +7,7 @@ Created on Sat Feb 12 22:15:29 2022  // @hk_nien
 from pathlib import Path
 import os
 import pandas as pd
+import numpy as np
 
 PCODES = dict([
     (3511, 'Utrecht'),
@@ -81,7 +82,7 @@ def _summary_to_scores(summary):
         atm = min(v[1] for v in vlist) # earliest appointment time
         qtm_00 = pd.Timestamp(qtm.strftime('%Y-%m-%dT00:00'))
         thresholds = [
-            (3, qtm + dhm('24:00')),
+            (3, qtm_00 + dhm('23:59')),
             (4, qtm + dhm('24:00')),
             (5, qtm_00 + dhm('48:00')),
             (6, qtm + dhm('48:00')),
@@ -104,19 +105,11 @@ def _summary_to_scores(summary):
             if atm < tm:
                 scores[pc4] = s
                 break
-            thresholds = [
-                (1, qtm_00 + dhm('13:00')),
-                (3, qtm_00 + dhm('24:00')),
-                (4, qtm + dhm('24:00')),
-                (5, qtm_00 + dhm('48:00')),
-                (6, qtm + dhm('48:00')),
-                (6.3, qtm_00 + dhm('72:00')),
-                (6.7, qtm + dhm('72.00')),
-                (7, atm)
-                ]
-
-    qtm_min = min(qtms)
-    qtm_mid = qtm_min + (max(qtms) - qtm_min)/2
+    if len(qtms) == 0:
+        qtm_mid = pd.Timestamp('1900-01-01')
+    else:
+        qtm_min = min(qtms)
+        qtm_mid = qtm_min + (max(qtms) - qtm_min)/2
     return scores, qtm_mid
 
 
@@ -196,9 +189,13 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
     sdf.insert(0, 'Date', dates)
     if decimal_comma:
         for c in sdf.columns[2:]:
-            mask = (sdf[c] != sdf[c].astype(int))
-            sdf[c] = sdf[c].astype(str)
-            sdf.loc[mask, c] = sdf.loc[mask, c].str.replace('.', ',', regex=False)
+            if np.any(sdf[c] != sdf[c].astype(int)):
+                # To be pasted into lang-nl spreadsheet that uses
+                # decimal comma.
+                print(f'{c}: {sdf[c].values}')
+                sdf[c] = sdf[c].astype(str)
+                sdf[c] = sdf[c].str.replace('.', ',', regex=False)
+                sdf[c] = sdf[c].str.replace(',0', '', regex=False)
 
     return sdf
 
@@ -209,6 +206,7 @@ if __name__ == '__main__':
     csv_fnames = sorted(Path('data-ggd').glob('ggd_scan-????-W??.csv'))
     df, start_tms = load_csv(csv_fnames[-1])
     sdf = get_scan_scores_df(df, start_tms[-2:])
+    # sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
     print(sdf)
     if len(sdf) > 1:
         sdf.to_clipboard(index=False)
