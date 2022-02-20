@@ -84,13 +84,10 @@ def _analyze_1scan_loc_mutations(df1, prev_addresses, silent=False):
     - silent: True to suppress output.
     """
     tm0 = df1.iloc[0]['scan_time']
-
-    if len(df1) == 1 and pd.isna(df1.iloc[0]['apt_date']):
+    if np.all(pd.isna(df1['apt_date'])):
         addresses = set()
     else:
         addresses = set(df1['short_addr'].unique())
-
-
     if not silent:
         print(f'\n===== scan {tm0.strftime("%Y-%m-%d %H:%M")} =====')
         print(f'* Aantal locaties: {len(addresses)}.')
@@ -115,7 +112,7 @@ def _analyze_1scan_slot_stats(df1):
 
     - df1: 1-scan dataframe slice
     """
-    if len(df1) == 1 and pd.isna(df1.iloc[0]['apt_date']):
+    if  np.all(pd.isna(df1.iloc[0]['apt_date'])):
         return
     # booking categories (name suffix, text label)
     book_cats = [

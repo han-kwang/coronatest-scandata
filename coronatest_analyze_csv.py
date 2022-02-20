@@ -38,6 +38,12 @@ PCODES = dict([
     ])
 
 
+def get_bad_scan_times():
+    """Return list of Timestamps with bad scan times, from CSV data."""
+    df = pd.read_csv('data-ggd/ggd_bad_scans.txt', comment='#')
+    tstamps = pd.to_datetime(df['Timestamp']).to_list()
+    return tstamps
+
 def _mean_time(ts_list):
     """Return mean timestamp value from list of timestamps."""
     ts0 = ts_list[0]
@@ -107,7 +113,7 @@ def _summary_to_scores(summary):
                 scores[pc4] = s
                 break
     if len(qtms) == 0:
-        qtm_mid = pd.Timestamp('1900-01-01')
+        qtm_mid = pd.Timestamp(None)
     else:
         qtm_min = min(qtms)
         qtm_mid = qtm_min + (max(qtms) - qtm_min)/2
@@ -152,7 +158,7 @@ def load_multi_csvs(csv_fnames):
         df, st = load_csv(f)
         dfs.append(df)
         start_tms.extend(st[:-1])
-    df = pd.concat(dfs)
+    df = pd.concat(dfs).reset_index()
     start_tms.append(start_tms[-1] + pd.Timedelta('1 min'))
     return df, start_tms
 
@@ -184,6 +190,9 @@ def get_scan_scores(df, tm_range):
                     options.append((row['scan_time'], row[f'opt{i}_time']))
         summary[pc4] = options
     scores, tstamp = _summary_to_scores(summary)
+    if pd.isna(tstamp):
+        tstamp = df1.iloc[len(df1)//2]['scan_time']
+
     minwait = _get_min_wait(summary)
 
     return tstamp, scores, minwait
@@ -191,6 +200,8 @@ def get_scan_scores(df, tm_range):
 
 def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
     """Get scan scores as dataframe, from csv dataframe.
+
+    Blacklisted scan times are dropped.
 
     Parameters:
 
@@ -208,8 +219,18 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
     records = []
     index = []
     minwait_hs = []
+    bad_stimes = get_bad_scan_times()
     for i in range(n-1):
-        tm, scores, minwait = get_scan_scores(df, tm_ranges[i:i+2])
+        tm_ra = tm_ranges[i:i+2]
+        is_ok = True
+        for tm in bad_stimes:
+            if tm_ra[0] <= tm < tm_ra[1]:
+                is_ok = False
+                break
+        if not is_ok:
+            print(f'Dropped scan at {tm_ra[0].strftime("%Y-%m-%d %H:%M")}')
+            continue
+        tm, scores, minwait = get_scan_scores(df, tm_ra)
         records.append(scores)
         index.append(tm)
         minwait_hs.append(minwait.total_seconds() / 3600)
@@ -226,7 +247,6 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
             if np.any(sdf[c] != sdf[c].astype(int)):
                 # To be pasted into lang-nl spreadsheet that uses
                 # decimal comma.
-                print(f'{c}: {sdf[c].values}')
                 sdf[c] = sdf[c].astype(str)
                 sdf[c] = sdf[c].str.replace('.', ',', regex=False)
                 sdf[c] = sdf[c].str.replace(',0$', '', regex=False)
