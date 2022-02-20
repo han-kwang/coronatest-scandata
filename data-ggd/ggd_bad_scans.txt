@@ -1,0 +1,5 @@
+# Scan timestamps with bad data (i.e., incomplete scans)
+Timestamp
+2022-02-13 21:42
+2022-02-08 18:38
+2022-02-04 23:35
