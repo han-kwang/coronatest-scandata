@@ -6,6 +6,7 @@ Created on Sat Feb 12 22:15:29 2022  // @hk_nien
 """
 from pathlib import Path
 import os
+import re
 import pandas as pd
 import numpy as np
 
@@ -113,6 +114,19 @@ def _summary_to_scores(summary):
     return scores, qtm_mid
 
 
+def _get_min_wait(summary):
+    """Return minimum wait Timedelta between scan time and appointment.
+
+    May be NaT if there is no data.
+    """
+    wtimes = []
+    for _, vlist in summary.items():
+        wtimes += [atm - qtm for qtm, atm in vlist]
+    if len(wtimes) == 0:
+        return pd.Timedelta(None)
+    return min(wtimes)
+
+
 def load_csv(csv_fname):
     """Return DataFrame and list of start times (+1)."""
     df = pd.read_csv(csv_fname, comment='#')
@@ -130,6 +144,19 @@ def load_csv(csv_fname):
     start_tms += [df.iloc[-1]['scan_time'] + pd.Timedelta('1 min')]
     return df, start_tms
 
+def load_multi_csvs(csv_fnames):
+    """Return DataFrame and list of start times (+1)"""
+    dfs = []
+    start_tms = []
+    for f in csv_fnames:
+        df, st = load_csv(f)
+        dfs.append(df)
+        start_tms.extend(st[:-1])
+    df = pd.concat(dfs)
+    start_tms.append(start_tms[-1] + pd.Timedelta('1 min'))
+    return df, start_tms
+
+
 def get_scan_scores(df, tm_range):
     """Get scan scores as pc4 -> score dict.
 
@@ -143,6 +170,7 @@ def get_scan_scores(df, tm_range):
 
     - tstamp: timestamp of the scan (mid-point)
     - scores: dict of pc4->score
+    - min_wait: Timedelta of minimum wait time from scan to appointment
     """
     mask = (df['scan_time'] >= tm_range[0]) & (df['scan_time'] < tm_range[1])
     df1 = df.loc[mask]
@@ -156,7 +184,9 @@ def get_scan_scores(df, tm_range):
                     options.append((row['scan_time'], row[f'opt{i}_time']))
         summary[pc4] = options
     scores, tstamp = _summary_to_scores(summary)
-    return tstamp, scores
+    minwait = _get_min_wait(summary)
+
+    return tstamp, scores, minwait
 
 
 def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
@@ -172,21 +202,25 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
 
     Return:
 
-    - Dataframe with scores, date_str, time_str, pc4 as columns.
+    - Dataframe with scores, date_str, time_str, pc4, min_wait as columns.
     """
     n = len(tm_ranges)
     records = []
     index = []
+    minwait_hs = []
     for i in range(n-1):
-        tm, scores = get_scan_scores(df, tm_ranges[i:i+2])
+        tm, scores, minwait = get_scan_scores(df, tm_ranges[i:i+2])
         records.append(scores)
         index.append(tm)
+        minwait_hs.append(minwait.total_seconds() / 3600)
 
     dates = [t.strftime('%Y-%m-%d') for t in index]
     times = [t.strftime('%H:%M') for t in index]
     sdf = pd.DataFrame.from_records(records)
     sdf.insert(0, 'Time', times)
     sdf.insert(0, 'Date', dates)
+    sdf['min_wait_h'] = np.around(minwait_hs, 2)
+    sdf.loc[sdf['min_wait_h'].isna(), 'min_wait_h'] = 999
     if decimal_comma:
         for c in sdf.columns[2:]:
             if np.any(sdf[c] != sdf[c].astype(int)):
@@ -195,7 +229,7 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
                 print(f'{c}: {sdf[c].values}')
                 sdf[c] = sdf[c].astype(str)
                 sdf[c] = sdf[c].str.replace('.', ',', regex=False)
-                sdf[c] = sdf[c].str.replace(',0', '', regex=False)
+                sdf[c] = sdf[c].str.replace(',0$', '', regex=False)
 
     return sdf
 
@@ -203,10 +237,15 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
 
 if __name__ == '__main__':
 
+    in_spyder = ('SPYDER_ARGS' in os.environ)
     csv_fnames = sorted(Path('data-ggd').glob('ggd_scan-????-W??.csv'))
-    df, start_tms = load_csv(csv_fnames[-1])
-    sdf = get_scan_scores_df(df, start_tms[-2:])
-    # sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
+
+    if in_spyder and input('(A)ll or latest?').lower() == 'a':
+        df, start_tms = load_multi_csvs(csv_fnames)
+        sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
+    else:
+        df, start_tms = load_csv(csv_fnames[-1])
+        sdf = get_scan_scores_df(df, start_tms[-2:])
     print(sdf)
     if len(sdf) > 1:
         sdf.to_clipboard(index=False)
@@ -217,6 +256,6 @@ if __name__ == '__main__':
     else:
         print('No output.')
 
-    if 'SPYDER_ARGS' not in os.environ:
+    if not in_spyder:
         input('Press Enter to quit and clear clipboard.')
 
