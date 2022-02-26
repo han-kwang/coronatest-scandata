@@ -122,8 +122,12 @@ Bestanden
 
 - `loc_id`: locatie ID (postcodecijfers+hash). Als er iets aan de locatie verandert
   (adres, bereikbaarheid), dan verandert deze ID ook.
-- `first_seen`, `last_seen`: eerste en laatste afspraakdatum (YYYY-mm-dd).
+- `first_seen`: eerste  afspraakdatum (YYYY-mm-dd).
 - Overige kolommen spreken voor zich.
+
+### Kolommen in data-ggd/ggd_locations-last_seen.csv
+
+- `last_seen`: laatste afspraakdatum. (Apart bestand i.v.m. frequente updates.)
 
 ### Let op:
 

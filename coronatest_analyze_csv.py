@@ -276,6 +276,6 @@ if __name__ == '__main__':
     else:
         print('No output.')
 
-    if not in_spyder:
+    if not in_spyder or len(sdf) > 1:
         input('Press Enter to quit and clear clipboard.')
 
