@@ -11,30 +11,42 @@ import pandas as pd
 import numpy as np
 
 PCODES = dict([
-    (3511, 'Utrecht'),
-    (5611, 'Eindhoven'),
-    (5038, 'Tilburg'),
-    (9726, 'Groningen'),
-    (8011, 'Zwolle'),
-    (6041, 'Roermond'),
+    # Regio Noord
     (1011, 'Amsterdam'),
-    (3013, 'Rotterdam'),
-    (2515, 'Den Haag'),
-    (7311, 'Apeldoorn'),
-    (6229, 'Maastricht'),
+    (1625, 'Hoorn|Zwaag'),
+    (1811, 'Alkmaar'),
     (7556, 'Hengelo'),
-    (6541, 'Nijmegen'),
-    (8911, 'Leeuwarden'),
-    (8232, 'Lelystad'),
-    (4462, 'Goes'),
-    (9501, 'Stadskanaal'),
-    (1625, 'Hoorn'),
-    (9291, 'Kollum'),
-    (5401, 'Uden'),
     (7903, 'Hoogeveen'),
     (7942, 'Meppel'),
-    (7471, 'Goor'),
+    (8232, 'Lelystad'),
+    (8442, 'Heerenveen'),
+    (8911, 'Leeuwarden'),
+    (9291, 'Kollum'),
+    (9501, 'Stadskanaal'),
+    (9726, 'Groningen'),
+
+    # Regio Midden
+    (2406, 'Alphen a/d Rijn'),
+    (2515, 'Den Haag'),
+    (3013, 'Rotterdam'),
+    (3511, 'Utrecht'),
+    (3901, 'Veenendaal'),
+    ((7137, 7131), 'Lichtenvoorde|Groenlo'),
+    (8011, 'Zwolle'),
+
+    # Regio Zuid
+    (4325, 'Renesse'),
+    (4462, 'Goes'),
+    (4701, 'Roosendaal'),
+    (5038, 'Tilburg'),
+    (5401, 'Uden'),
+    (5611, 'Eindhoven'),
     (5801, 'Oostrum'),
+    (6101, 'Echt'),
+    (6229, 'Maastricht'),
+    (6541, 'Nijmegen'),
+    (7311, 'Apeldoorn'),
+    (7471, 'Goor'),
     ])
 
 
@@ -74,15 +86,26 @@ def _summary_to_scores(summary):
 
     # Convert to number codes.
     scores = {k: '?' for k in PCODES}
+    multi_pcs = {}  # pc4 -> (pc4[0], pc4[1], ...)
+    for pc in PCODES:
+        if isinstance(pc, tuple):
+            for pc1 in pc:
+                multi_pcs[pc1] = pc
+
     qtms = []
     dhm = _delta_time_hhmm
     for pc4, vlist in summary.items():
         pc4 = int(pc4)
         if pc4 not in scores:
-            print(f'{pc4} not in list...')
-            continue
+            if pc4 in multi_pcs:
+                pc4_key = multi_pcs[pc4]
+            else:
+                print(f'{pc4} not in list...')
+                continue
+        else:
+            pc4_key = pc4
         if len(vlist) == 0:
-            scores[pc4] = 7
+            scores[pc4_key] = 7
             continue
         qtm = _mean_time([v[0] for v in vlist]) # query time
         qtms.append(qtm)
@@ -110,7 +133,7 @@ def _summary_to_scores(summary):
 
         for s, tm in thresholds:
             if atm < tm:
-                scores[pc4] = s
+                scores[pc4_key] = s
                 break
     if len(qtms) == 0:
         qtm_mid = pd.Timestamp(None)
@@ -159,7 +182,7 @@ def load_multi_csvs(csv_fnames):
         dfs.append(df)
         start_tms.extend(st[:-1])
     df = pd.concat(dfs).reset_index()
-    start_tms.append(start_tms[-1] + pd.Timedelta('1 min'))
+    start_tms.append(df.iloc[-1]['scan_time'] + pd.Timedelta('1 min'))
     return df, start_tms
 
 
@@ -181,20 +204,23 @@ def get_scan_scores(df, tm_range):
     mask = (df['scan_time'] >= tm_range[0]) & (df['scan_time'] < tm_range[1])
     df1 = df.loc[mask]
     summary = {}
-    for pc4, city in PCODES.items():
+    for pc4, city_re in PCODES.items():
+        pc4_tup = (pc4,) if isinstance(pc4, int) else pc4
         options = []
-        for _, row in df1.loc[df1['req_pc4'] == pc4].iterrows():
+        req_pc4 = None
+        for _, row in df1.loc[df1['req_pc4'].isin(pc4_tup)].iterrows():
+            req_pc4 = int(row['req_pc4'])
             for i in range(3):
                 addr = row[f'opt{i}_short_addr']
-                if addr and addr[5:] == city:
+                if addr and re.match(f'{city_re}$', addr[5:]):
                     options.append((row['scan_time'], row[f'opt{i}_time']))
-        summary[pc4] = options
+        if req_pc4 is not None:
+            summary[req_pc4] = options
     scores, tstamp = _summary_to_scores(summary)
     if pd.isna(tstamp):
         tstamp = df1.iloc[len(df1)//2]['scan_time']
 
     minwait = _get_min_wait(summary)
-
     return tstamp, scores, minwait
 
 
@@ -230,6 +256,9 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
         if not is_ok:
             print(f'Dropped scan at {tm_ra[0].strftime("%Y-%m-%d %H:%M")}')
             continue
+        if i == n-2:
+            print('here')
+
         tm, scores, minwait = get_scan_scores(df, tm_ra)
         records.append(scores)
         index.append(tm)
@@ -242,24 +271,25 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
     sdf.insert(0, 'Date', dates)
     sdf['min_wait_h'] = np.around(minwait_hs, 2)
     sdf.loc[sdf['min_wait_h'].isna(), 'min_wait_h'] = 999
+    sdf.columns = [
+        ('/'.join([str(x) for x in c]) if isinstance(c, tuple) else c)
+        for c in sdf.columns
+        ]
     if decimal_comma:
         for c in sdf.columns[2:]:
-            if np.any(sdf[c] != sdf[c].astype(int)):
-                # To be pasted into lang-nl spreadsheet that uses
-                # decimal comma.
-                sdf[c] = sdf[c].astype(str)
-                sdf[c] = sdf[c].str.replace('.', ',', regex=False)
-                sdf[c] = sdf[c].str.replace(',0$', '', regex=False)
+            sdf[c] = sdf[c].astype(str)
+            sdf[c] = sdf[c].str.replace('.', ',', regex=False)
+            sdf[c] = sdf[c].str.replace(',0$', '', regex=False)
+            sdf[c] = sdf[c].str.replace('?', '', regex=False)
 
     return sdf
-
 
 
 if __name__ == '__main__':
 
     in_spyder = ('SPYDER_ARGS' in os.environ)
     csv_fnames = sorted(Path('data-ggd').glob('ggd_scan-????-W??.csv'))
-
+    # FIXME if
     if in_spyder and input('(A)ll or latest?').lower() == 'a':
         df, start_tms = load_multi_csvs(csv_fnames)
         sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
@@ -276,6 +306,7 @@ if __name__ == '__main__':
     else:
         print('No output.')
 
-    if not in_spyder or len(sdf) > 1:
+    if not in_spyder:
+        # Note: in Spyder, copy/paste will stall while input is blocked.
         input('Press Enter to quit and clear clipboard.')
 
