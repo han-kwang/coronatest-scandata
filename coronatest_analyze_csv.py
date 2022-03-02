@@ -15,6 +15,7 @@ PCODES = dict([
     (1011, 'Amsterdam'),
     (1625, 'Hoorn|Zwaag'),
     (1811, 'Alkmaar'),
+    (7471, 'Goor'),
     (7556, 'Hengelo'),
     (7903, 'Hoogeveen'),
     (7942, 'Meppel'),
@@ -32,6 +33,7 @@ PCODES = dict([
     (3511, 'Utrecht'),
     (3901, 'Veenendaal'),
     ((7137, 7131), 'Lichtenvoorde|Groenlo'),
+    (7311, 'Apeldoorn'),
     (8011, 'Zwolle'),
 
     # Regio Zuid
@@ -45,8 +47,6 @@ PCODES = dict([
     (6101, 'Echt'),
     (6229, 'Maastricht'),
     (6541, 'Nijmegen'),
-    (7311, 'Apeldoorn'),
-    (7471, 'Goor'),
     ])
 
 
@@ -289,7 +289,6 @@ if __name__ == '__main__':
 
     in_spyder = ('SPYDER_ARGS' in os.environ)
     csv_fnames = sorted(Path('data-ggd').glob('ggd_scan-????-W??.csv'))
-    # FIXME if
     if in_spyder and input('(A)ll or latest?').lower() == 'a':
         df, start_tms = load_multi_csvs(csv_fnames)
         sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
