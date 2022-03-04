@@ -19,6 +19,7 @@ PCODES = dict([
     (7556, 'Hengelo'),
     (7903, 'Hoogeveen'),
     (7942, 'Meppel'),
+    (8011, 'Zwolle'),
     (8232, 'Lelystad'),
     (8442, 'Heerenveen'),
     (8911, 'Leeuwarden'),
@@ -34,7 +35,6 @@ PCODES = dict([
     (3901, 'Veenendaal'),
     ((7137, 7131), 'Lichtenvoorde|Groenlo'),
     (7311, 'Apeldoorn'),
-    (8011, 'Zwolle'),
 
     # Regio Zuid
     (4325, 'Renesse'),
