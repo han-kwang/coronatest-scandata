@@ -7,6 +7,7 @@ Created on Sat Feb 12 22:15:29 2022  // @hk_nien
 from pathlib import Path
 import os
 import re
+import sys
 import pandas as pd
 import numpy as np
 
@@ -144,16 +145,22 @@ def _summary_to_scores(summary):
 
 
 def _get_min_wait(summary):
-    """Return minimum wait Timedelta between scan time and appointment.
+    """Return minimum and median wait Timedelta between scan time and appointment.
 
-    May be NaT if there is no data.
+    summary is dict of pc4 -> list of timestamps
+    No data -> 999 h.
+
+    For the median, NaT is counted as infinite.
     """
     wtimes = []
     for _, vlist in summary.items():
-        wtimes += [atm - qtm for qtm, atm in vlist]
-    if len(wtimes) == 0:
-        return pd.Timedelta(None)
-    return min(wtimes)
+        wtimes_this = [atm - qtm for qtm, atm in vlist]
+        wtimes.append(
+            min(wtimes_this) if wtimes_this else pd.Timedelta(99, 'h')
+            )
+    minwait = min(wtimes) if wtimes else 999
+    medwait = pd.Timedelta(np.median(wtimes))
+    return minwait, medwait
 
 
 def load_csv(csv_fname):
@@ -219,9 +226,10 @@ def get_scan_scores(df, tm_range):
     scores, tstamp = _summary_to_scores(summary)
     if pd.isna(tstamp):
         tstamp = df1.iloc[len(df1)//2]['scan_time']
-
-    minwait = _get_min_wait(summary)
-    return tstamp, scores, minwait
+    minwait, medwait = _get_min_wait(summary)
+    if medwait == 999:
+        medwait = pd.Timedelta(None)
+    return tstamp, scores, minwait, medwait
 
 
 def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
@@ -239,12 +247,13 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
 
     Return:
 
-    - Dataframe with scores, date_str, time_str, pc4, min_wait as columns.
+    - Dataframe with scores, date_str, time_str, pc4, min_wait, med_wait as columns.
     """
     n = len(tm_ranges)
     records = []
     index = []
     minwait_hs = []
+    medwait_hs = []
     bad_stimes = get_bad_scan_times()
     for i in range(n-1):
         tm_ra = tm_ranges[i:i+2]
@@ -256,13 +265,11 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
         if not is_ok:
             print(f'Dropped scan at {tm_ra[0].strftime("%Y-%m-%d %H:%M")}')
             continue
-        if i == n-2:
-            print('here')
-
-        tm, scores, minwait = get_scan_scores(df, tm_ra)
+        tm, scores, minwait, medwait = get_scan_scores(df, tm_ra)
         records.append(scores)
         index.append(tm)
         minwait_hs.append(minwait.total_seconds() / 3600)
+        medwait_hs.append(medwait.total_seconds() / 3600)
 
     dates = [t.strftime('%Y-%m-%d') for t in index]
     times = [t.strftime('%H:%M') for t in index]
@@ -270,6 +277,7 @@ def get_scan_scores_df(df, tm_ranges, decimal_comma=True):
     sdf.insert(0, 'Time', times)
     sdf.insert(0, 'Date', dates)
     sdf['min_wait_h'] = np.around(minwait_hs, 2)
+    sdf['med_wait_h'] = np.around(medwait_hs, 2)
     sdf.loc[sdf['min_wait_h'].isna(), 'min_wait_h'] = 999
     sdf.columns = [
         ('/'.join([str(x) for x in c]) if isinstance(c, tuple) else c)
@@ -289,7 +297,9 @@ if __name__ == '__main__':
 
     in_spyder = ('SPYDER_ARGS' in os.environ)
     csv_fnames = sorted(Path('data-ggd').glob('ggd_scan-????-W??.csv'))
-    if in_spyder and input('(A)ll or latest?').lower() == 'a':
+    do_all = ('--all' in sys.argv)
+    do_all = do_all or in_spyder and input('(A)ll or latest?').lower() == 'a'
+    if do_all:
         df, start_tms = load_multi_csvs(csv_fnames)
         sdf = get_scan_scores_df(df, start_tms).iloc[::-1]
     else:
