@@ -2,6 +2,7 @@ loc_id,straat,huisnummer,huisnummerToevoeging,postcode,plaats,bereikbaarheid,fir
 1025:4076,Buikslotermeerplein,0,P1,1025 ES,Amsterdam,DIVERSE_MANIEREN,2022-02-05
 1034:ecbd,Bezaanjachtplein,42,,1034 GC,Amsterdam,DIVERSE_MANIEREN,2022-02-06
 1034:f67a,Bezaanjachtplein,,,1034 GC,Amsterdam,DIVERSE_MANIEREN,2022-02-09
+1043:59a7,Seineweg,2,,1043BG,Amsterdam,DIVERSE_MANIEREN,2022-03-15
 1043:90eb,Teleportboulevard,0,,1043 DZ,Amsterdam,DIVERSE_MANIEREN,2022-02-05
 1066:04e8,Louwesweg,6,ingang Spoedeisende Hulp,1066 EC,Amsterdam,ALLEEN_FIETS,2022-02-05
 1078:d1fd,Europaplein,24,,1078 GZ,Amsterdam,DIVERSE_MANIEREN,2022-02-05
@@ -49,6 +50,7 @@ loc_id,straat,huisnummer,huisnummerToevoeging,postcode,plaats,bereikbaarheid,fir
 5807:ff2f,De Voorde,40,,5807 EZ,Oostrum,DIVERSE_MANIEREN,2022-02-05
 6101:feea,Nobelweg ,19,,6101 XB,Echt,DIVERSE_MANIEREN,2022-02-14
 6229:121a,Paul-Henri Spaaklaan,2,,6229 EN,Maastricht,DIVERSE_MANIEREN,2022-02-07
+6532:b564,Weg door Jonkerbos,10,,6532SZ,Nijmegen,DIVERSE_MANIEREN,2022-03-09
 6541:dc80,De Biezen (via Rivierstraat),1,,6541 BN,Nijmegen,DIVERSE_MANIEREN,2022-02-06
 6541:fa99,De Biezen,1,,6541 BN,Nijmegen,DIVERSE_MANIEREN,2022-02-09
 6603:3380,Graafseweg,699,,6603 CE,Wijchen,DIVERSE_MANIEREN,2022-02-07
